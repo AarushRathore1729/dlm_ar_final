@@ -1,0 +1,43 @@
+# QQP CheckList on GPU: LLaDA-only run
+
+experiment:
+  name: "phase2_checklist_qqp_gpu_llada_only"
+  output_dir: "results/checklist/gpu/qqp_llada_only"
+
+models:
+  - name: "GSAI-ML/LLaDA-8B-Instruct"
+    type: "llada"
+    device: "auto"
+    sampling_steps: 16
+    model_kwargs:
+      torch_dtype: "bfloat16"
+      block_length: 32
+      remasking: "low_confidence"
+
+checklist:
+  task: "qqp"
+  labels: ["not_duplicate", "duplicate"]
+  fallback_label: "not_duplicate"
+  suite_path: "data/checklist/release_data/qqp/qqp_suite_py310.pkl"
+  release_data_dir: "data/checklist/release_data"
+  raw_fallback: false
+  official_run_from_file: true
+  max_new_tokens: 16
+  demo_limit: 11399
+  use_sentiment_pipeline: false
+  task_prompt_template: |
+    Determine whether the following two questions are duplicates. Reply with exactly one label: duplicate or not_duplicate.
+
+    Question 1: {question1}
+    Question 2: {question2}
+  judge_prompt_template: |
+    You are evaluating a duplicate-question classifier.
+    Original pair: "{text}"
+    The model response: "{response}"
+    Reply with exactly one label from: {label_list}
+  judge:
+    name: "Qwen/Qwen2.5-1.5B-Instruct"
+    type: "ar"
+    device: "auto"
+    model_kwargs:
+      torch_dtype: "bfloat16"

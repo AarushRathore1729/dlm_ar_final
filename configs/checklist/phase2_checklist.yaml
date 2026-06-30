@@ -1,0 +1,58 @@
+# CheckList behavioral testing (ACL 2020) for LLaDA vs Llama with LLM-as-judge.
+# Run: python scripts/run_checklist.py --config configs/checklist/phase2_checklist.yaml
+# Requires: pip install checklist; download release_data (see data/checklist/README.md).
+
+experiment:
+  name: "phase2_checklist"
+  output_dir: "results/checklist/default"
+
+models:
+  - name: "meta-llama/Llama-3.1-8B-Instruct"
+    type: "ar"
+    device: "auto"
+    model_kwargs:
+      torch_dtype: "bfloat16"
+
+  - name: "GSAI-ML/LLaDA-8B-Instruct"
+    type: "llada"
+    device: "auto"
+    sampling_steps: 64
+    model_kwargs:
+      torch_dtype: "bfloat16"
+      block_length: 32
+      remasking: "low_confidence"
+
+checklist:
+  task: "sentiment"
+  labels: ["negative", "neutral", "positive"]
+  fallback_label: "neutral"
+  suite_path: "data/checklist/release_data/sentiment/sentiment_suite_py310.pkl"
+  release_data_dir: "data/checklist/release_data"
+  raw_fallback: false
+  raw_min_agreement: 4
+  max_new_tokens: 64
+  # Optional: override how CheckList text examples are turned into prompts
+  # task_prompt_template: |
+  #   You are a strict sentiment classifier.
+  #   Reply with exactly one lowercase label from: negative, neutral, positive.
+  #
+  #   {text}
+  # Demo: set to a small number (e.g. 3 or 5) to run only that many examples per test
+  demo_limit: 5
+  # Paper-style: use HF sentiment pipeline on model responses (fast, no judge LLM)
+  use_sentiment_pipeline: true
+  pipeline_model: "cardiffnlp/twitter-roberta-base-sentiment-latest"
+  # Or use LLM judge: set use_sentiment_pipeline to false and uncomment judge
+  # use_sentiment_pipeline: false
+  # Optional custom judge template. Available fields: {task}, {text}, {response}, {label_list}
+  # judge_prompt_template: |
+  #   You are evaluating a model response for the task "{task}".
+  #   Original text: "{text}"
+  #   Model response: "{response}"
+  #   Reply with exactly one label from: {label_list}
+  judge:
+    name: "Qwen/Qwen2.5-1.5B-Instruct"
+    type: "ar"
+    device: "auto"
+    model_kwargs:
+      torch_dtype: "bfloat16"

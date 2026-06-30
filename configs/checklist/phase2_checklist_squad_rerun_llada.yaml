@@ -1,0 +1,34 @@
+# SQuAD CheckList – authoritative post-fix run (JSON suite), LLaDA only
+
+experiment:
+  name: phase2_checklist_squad_rerun_llada
+  output_dir: results/checklist/squad/llada_rerun_fixed
+
+models:
+  - name: GSAI-ML/LLaDA-8B-Instruct
+    type: llada
+    device: auto
+    sampling_steps: 8
+    model_kwargs:
+      torch_dtype: bfloat16
+      block_length: 32
+      remasking: low_confidence
+
+checklist:
+  task: squad
+  suite_path: results/checklist/suites/squad_suite_original_dump.json
+  official_run_from_file: false
+  max_new_tokens: 32
+  task_prompt_template: |
+    Read the passage and answer the question.
+    Output exactly one answer span copied verbatim from the passage.
+    Do not explain.
+    Do not answer in a full sentence.
+    Do not repeat the question.
+    Do not add any words that are not in the passage.
+    Do not use quotes or prefixes like "Answer:".
+    If the answer is a short phrase, output only that phrase.
+
+    Passage: {passage}
+    Question: {question}
+    Answer:

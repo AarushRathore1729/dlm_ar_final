@@ -1,0 +1,37 @@
+experiment:
+  name: expansion_gemma_qqp
+  output_dir: results/expansion/checklist/qqp/gemma
+
+models:
+  - name: google/gemma-2-9b-it
+    type: ar
+    device: auto
+    sampling_steps: 100
+    model_kwargs:
+      torch_dtype: bfloat16
+
+checklist:
+  task: qqp
+  labels: [not_duplicate, duplicate]
+  fallback_label: not_duplicate
+  suite_path: results/checklist/suites/qqp_suite_original_dump.json
+  official_run_from_file: false
+  max_new_tokens: 16
+  batch_size: 8
+  task_prompt_template: |
+    Determine whether the following two questions are duplicates. Reply with exactly one label: duplicate or not_duplicate.
+
+    Question 1: {question1}
+    Question 2: {question2}
+  judge_prompt_template: |
+    You are evaluating a duplicate-question classifier.
+    Original pair: "{text}"
+    The model response: "{response}"
+    Reply with exactly one label from: {label_list}
+  use_sentiment_pipeline: false
+  judge:
+    name: Qwen/Qwen2.5-1.5B-Instruct
+    type: ar
+    device: auto
+    model_kwargs:
+      torch_dtype: bfloat16

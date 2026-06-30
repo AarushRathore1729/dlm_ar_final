@@ -1,0 +1,32 @@
+experiment:
+  name: expansion_gemma_sentiment
+  output_dir: results/expansion/checklist/sentiment/gemma
+
+models:
+  - name: google/gemma-2-9b-it
+    type: ar
+    device: auto
+    sampling_steps: 100
+    model_kwargs:
+      torch_dtype: bfloat16
+
+checklist:
+  task: sentiment
+  labels: [negative, neutral, positive]
+  fallback_label: neutral
+  suite_path: results/checklist/suites/sentiment_suite_original_dump.json
+  official_run_from_file: false
+  max_new_tokens: 4
+  batch_size: 8
+  task_prompt_template: |
+    You are a strict sentiment classifier.
+    Read the text and classify its sentiment.
+    Reply with exactly one lowercase label: negative, neutral, or positive.
+    Do not explain your answer.
+    Do not output any other words, punctuation, or formatting.
+
+    Text: {text}
+    Sentiment:
+  use_sentiment_pipeline: true
+  sentiment_pipeline_parse_direct_labels: true
+  pipeline_model: cardiffnlp/twitter-roberta-base-sentiment-latest

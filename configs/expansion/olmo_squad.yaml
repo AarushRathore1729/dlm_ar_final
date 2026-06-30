@@ -1,0 +1,31 @@
+experiment:
+  name: expansion_olmo_squad
+  output_dir: results/expansion/checklist/squad/olmo
+
+models:
+  - name: allenai/OLMo-2-1124-7B-Instruct
+    type: ar
+    device: auto
+    sampling_steps: 100
+    model_kwargs:
+      torch_dtype: bfloat16
+
+checklist:
+  task: squad
+  suite_path: results/checklist/suites/squad_suite_original_dump.json
+  official_run_from_file: false
+  max_new_tokens: 32
+  batch_size: 8
+  task_prompt_template: |
+    Read the passage and answer the question.
+    Output exactly one answer span copied verbatim from the passage.
+    Do not explain.
+    Do not answer in a full sentence.
+    Do not repeat the question.
+    Do not add any words that are not in the passage.
+    Do not use quotes or prefixes like "Answer:".
+    If the answer is a short phrase, output only that phrase.
+
+    Passage: {passage}
+    Question: {question}
+    Answer:

@@ -1,0 +1,45 @@
+# SQuAD CheckList – alternate GPU path: release pickle + official_run_from_file (not the paper tables).
+# Authoritative JSON-suite runs use phase2_checklist_squad_rerun_llama.yaml → squad/llama_rerun_fixed/.
+
+experiment:
+  name: "phase2_checklist_squad_gpu_llama_only"
+  output_dir: "results/checklist/squad/llama_gpu_official_file"
+
+models:
+  - name: "meta-llama/Llama-3.1-8B-Instruct"
+    type: "ar"
+    device: "auto"
+    model_kwargs:
+      torch_dtype: "bfloat16"
+
+checklist:
+  task: "squad"
+  suite_path: "data/checklist/release_data/squad/squad_suite_py310.pkl"
+  release_data_dir: "data/checklist/release_data"
+  raw_fallback: false
+  official_run_from_file: true
+  max_new_tokens: 16
+  demo_limit: 7129
+  squad_repair_max_retries: 1
+  squad_max_answer_chars: 128
+  squad_use_judge_fallback: true
+  use_sentiment_pipeline: false
+  task_prompt_template: |
+    Read the passage and answer the question.
+    Output exactly one answer span copied verbatim from the passage.
+    Do not explain.
+    Do not answer in a full sentence.
+    Do not repeat the question.
+    Do not add any words that are not in the passage.
+    Do not use quotes or prefixes like "Answer:".
+    If the answer is a short phrase, output only that phrase.
+
+    Passage: {passage}
+    Question: {question}
+    Answer:
+  judge:
+    name: "Qwen/Qwen2.5-1.5B-Instruct"
+    type: "ar"
+    device: "auto"
+    model_kwargs:
+      torch_dtype: "bfloat16"

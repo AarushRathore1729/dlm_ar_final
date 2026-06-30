@@ -1,0 +1,41 @@
+# Sentiment CheckList – final rerun with corrected expectations, LLaDA only
+
+experiment:
+  name: phase2_checklist_sentiment_rerun_llada
+  output_dir: results/checklist/sentiment/llada_rerun_fixed
+
+models:
+  - name: GSAI-ML/LLaDA-8B-Instruct
+    type: llada
+    device: auto
+    sampling_steps: 8
+    model_kwargs:
+      torch_dtype: bfloat16
+      block_length: 32
+      remasking: low_confidence
+
+checklist:
+  task: sentiment
+  labels: [negative, neutral, positive]
+  fallback_label: neutral
+  suite_path: results/checklist/suites/sentiment_suite_original_dump.json
+  official_run_from_file: false
+  max_new_tokens: 4
+  task_prompt_template: |
+    You are a strict sentiment classifier.
+    Read the text and classify its sentiment.
+    Reply with exactly one lowercase label: negative, neutral, or positive.
+    Do not explain your answer.
+    Do not output any other words, punctuation, or formatting.
+
+    Text: {text}
+    Sentiment:
+  judge_prompt_template: |
+    Output exactly one label (in lowercase): negative , neutral , or positive .
+    Do not output anything else.
+
+    Original text: {text}
+    Model response: {response}
+  use_sentiment_pipeline: true
+  sentiment_pipeline_parse_direct_labels: true
+  pipeline_model: cardiffnlp/twitter-roberta-base-sentiment-latest

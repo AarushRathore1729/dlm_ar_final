@@ -1,0 +1,32 @@
+experiment:
+  name: expansion_dream_sentiment_rerun
+  output_dir: results/expansion/checklist/sentiment/dream_rerun
+
+models:
+  - name: Dream-org/Dream-v0-Instruct-7B
+    type: dream
+    device: auto
+    sampling_steps: 64
+    model_kwargs:
+      torch_dtype: bfloat16
+
+checklist:
+  task: sentiment
+  labels: [negative, neutral, positive]
+  fallback_label: neutral
+  suite_path: results/checklist/suites/sentiment_suite_original_dump.json
+  official_run_from_file: false
+  max_new_tokens: 4
+  batch_size: 4
+  task_prompt_template: |
+    You are a strict sentiment classifier.
+    Read the text and classify its sentiment.
+    Reply with exactly one lowercase label: negative, neutral, or positive.
+    Do not explain your answer.
+    Do not output any other words, punctuation, or formatting.
+
+    Text: {text}
+    Sentiment:
+  use_sentiment_pipeline: true
+  sentiment_pipeline_parse_direct_labels: true
+  pipeline_model: cardiffnlp/twitter-roberta-base-sentiment-latest

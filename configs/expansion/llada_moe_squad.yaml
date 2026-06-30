@@ -1,0 +1,33 @@
+experiment:
+  name: expansion_llada_moe_squad
+  output_dir: results/expansion/checklist/squad/llada_moe
+
+models:
+  - name: inclusionAI/LLaDA-MoE-7B-A1B-Instruct
+    type: llada_moe
+    device: auto
+    sampling_steps: 128
+    model_kwargs:
+      torch_dtype: bfloat16
+      block_length: 32
+      remasking: low_confidence
+
+checklist:
+  task: squad
+  suite_path: results/checklist/suites/squad_suite_original_dump.json
+  official_run_from_file: false
+  max_new_tokens: 32
+  batch_size: 8
+  task_prompt_template: |
+    Read the passage and answer the question.
+    Output exactly one answer span copied verbatim from the passage.
+    Do not explain.
+    Do not answer in a full sentence.
+    Do not repeat the question.
+    Do not add any words that are not in the passage.
+    Do not use quotes or prefixes like "Answer:".
+    If the answer is a short phrase, output only that phrase.
+
+    Passage: {passage}
+    Question: {question}
+    Answer:
