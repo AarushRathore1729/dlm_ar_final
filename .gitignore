@@ -1,0 +1,30 @@
+# Python/cache artifacts
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# LaTeX build artifacts
+*.aux
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+
+# Local/editor files
+.env
+.DS_Store
+.vscode/
+.idea/
+
+# Local archives and raw outputs
+docs/
+extras/
+results/checklist/
+results/lightning/
