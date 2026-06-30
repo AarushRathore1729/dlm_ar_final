@@ -1,0 +1,31 @@
+\begin{table}[t]
+\centering
+\caption{Pair-weighted mean ratio $r=d_\mathrm{out}/d_\mathrm{in}$ across INV, DIR, and MFT tests for all models. $\alpha$ denotes DLM ratio, $\gamma$ denotes AR ratio.}
+\label{tab:all-model-contraction}
+\small
+\begin{tabular}{lrrrr}
+\toprule
+Model & SENTIMENT & QQP & SQUAD & Avg \\
+\midrule
+LLaDA-8B & 1.612 & 0.513 & 5.248 & 2.458 \\
+\midrule
+Llama-3.1-8B & 1.691 & 0.574 & 5.412 & 2.559 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering
+\caption{Pair-weighted $\alpha_\mathrm{Diff}$ (mean over DLMs) and $\gamma_\mathrm{AR}$ (mean over ARs) per task, matching Table~3 format.}
+\label{tab:expansion-alpha-gamma}
+\small
+\begin{tabular}{lrrrrrr}
+\toprule
+task & $\alpha_\mathrm{Diff}$ & $\gamma_\mathrm{AR}$ & $\gamma-\alpha$ & $\gamma/\alpha$ & $\Delta^\mathrm{Diff}_\perp$ & $\Delta^\mathrm{AR}_\perp$ \\
+\midrule
+sentiment & 1.612 & 1.691 & +0.079 & 1.049 & 0.113 & 0.110 \\
+qqp & 0.513 & 0.574 & +0.062 & 1.120 & 0.076 & 0.049 \\
+squad & 5.248 & 5.412 & +0.164 & 1.031 & 0.458 & 0.472 \\
+\bottomrule
+\end{tabular}
+\end{table}

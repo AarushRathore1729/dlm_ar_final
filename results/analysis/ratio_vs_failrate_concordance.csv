@@ -1,0 +1,89 @@
+task,subtest,test_type,capability,alpha_llada,gamma_llama,gap_gamma_minus_alpha,ratio_winner,llada_fail,llama_fail,failrate_winner,concordance
+qqp,"(q, paraphrase(q))",DIR,Robustness,0.0187,12.0409,12.0222,LLaDA,0.045,1.0,LLaDA,agree
+qqp,Change first and last name in one of the questions,DIR,NER,1.8097,0.5499,-1.2599,Llama,0.151,0.0777,Llama,agree
+qqp,Change first name in one of the questions,DIR,NER,2.8175,1.1316,-1.6859,Llama,0.348,0.118,Llama,agree
+qqp,Change location in one of the questions,DIR,NER,2.208,0.4517,-1.7563,Llama,0.0584,0.0541,Llama,agree
+qqp,Change numbers in one of the questions,DIR,NER,4.294,1.1886,-3.1053,Llama,0.3447,0.0607,Llama,agree
+qqp,"Keep entitites, fill in with gibberish",DIR,NER,0.9915,0.2497,-0.7418,Llama,0.282,0.192,Llama,agree
+qqp,Testing implications,DIR,Logic,1.1793,0.8566,-0.3227,Llama,0.1687,0.0968,Llama,agree
+sentiment,"""used to"" should reduce",DIR,Temporal,3.4126,6.7216,3.309,LLaDA,0.0,0.0,tie,agree
+sentiment,add negative phrases,DIR,Vocabulary,10.6655,10.1019,-0.5636,Llama,0.012,0.008,Llama,agree
+sentiment,add positive phrases,DIR,Vocabulary,8.1958,7.5424,-0.6534,Llama,0.024,0.024,tie,agree
+sentiment,intensifiers,DIR,Vocabulary,0.1824,0.8306,0.6482,LLaDA,0.0,0.004,LLaDA,agree
+sentiment,reducers,DIR,Vocabulary,1.2319,6.0207,4.7888,LLaDA,0.0,0.0,tie,agree
+qqp,"Symmetry: f(a, b) = f(b, a)",INV,Logic,0.6872,0.5576,-0.1296,Llama,0.08,0.084,LLaDA,DISCORD
+qqp,Change same location in both questions,INV,NER,0.2281,0.2727,0.0446,LLaDA,0.116,0.154,LLaDA,agree
+qqp,Change same name in both questions,INV,NER,0.1416,0.4317,0.2901,LLaDA,0.094,0.194,LLaDA,agree
+qqp,Change same number in both questions,INV,NER,0.3071,0.9894,0.6824,LLaDA,0.092,0.158,LLaDA,agree
+qqp,Product of paraphrases(q1) * paraphrases(q2),INV,Robustness,1.2622,1.9869,0.7247,LLaDA,0.23,0.45,LLaDA,agree
+qqp,Replace synonyms in real pairs,INV,Taxonomy,0.9982,0.6722,-0.326,Llama,0.0757,0.0637,Llama,agree
+qqp,add one typo,INV,Robustness,0.5505,0.7645,0.214,LLaDA,0.084,0.1,LLaDA,agree
+qqp,contrations,INV,Robustness,1.0631,1.3992,0.3362,LLaDA,0.028,0.052,LLaDA,agree
+sentiment,2 typos,INV,Robustness,0.8497,0.9418,0.0921,LLaDA,0.066,0.074,LLaDA,agree
+sentiment,add random urls and handles,INV,Robustness,1.0353,0.7282,-0.3071,Llama,0.116,0.096,Llama,agree
+sentiment,change locations,INV,NER,0.1781,0.2125,0.0344,LLaDA,0.055,0.0627,LLaDA,agree
+sentiment,change names,INV,NER,0.4307,0.1895,-0.2412,Llama,0.0423,0.0302,Llama,agree
+sentiment,change neutral words with BERT,INV,Vocabulary,1.2113,1.8412,0.6299,LLaDA,0.108,0.132,LLaDA,agree
+sentiment,change numbers,INV,NER,0.2759,0.2595,-0.0164,Llama,0.023,0.023,tie,agree
+sentiment,contractions,INV,Robustness,0.0,0.0,0.0,Llama,0.018,0.013,Llama,agree
+sentiment,protected: nationality,INV,Fairness,0.0566,0.0243,-0.0324,Llama,0.0267,0.015,Llama,agree
+sentiment,protected: race,INV,Fairness,0.8342,0.3695,-0.4647,Llama,0.225,0.0883,Llama,agree
+sentiment,protected: religion,INV,Fairness,0.6592,0.0724,-0.5868,Llama,0.295,0.0583,Llama,agree
+sentiment,protected: sexual,INV,Fairness,0.73,0.1635,-0.5666,Llama,0.48,0.1017,Llama,agree
+sentiment,punctuation,INV,Robustness,5.7628,2.817,-2.9457,Llama,0.042,0.024,Llama,agree
+sentiment,typos,INV,Robustness,0.7164,1.2897,0.5733,LLaDA,0.032,0.056,LLaDA,agree
+squad,Add random sentence to context,INV,Robustness,0.6922,0.3021,-0.3901,Llama,0.162,0.11,Llama,agree
+squad,Change location everywhere,INV,NER,1.4805,1.1206,-0.3598,Llama,0.272,0.206,Llama,agree
+squad,Change name everywhere,INV,NER,1.6774,1.5826,-0.0948,Llama,0.3,0.234,Llama,agree
+squad,Question contractions,INV,Robustness,0.0,0.0,0.0,Llama,0.058,0.044,Llama,agree
+squad,Question typo,INV,Robustness,1.2939,0.3279,-0.966,Llama,0.108,0.06,Llama,agree
+qqp,A and / or B is the same as B and / or A,MFT,Logic,0.0,0.0,0.0,Llama,0.0,1.0,LLaDA,DISCORD
+qqp,A or B is not the same as A and B,MFT,Logic,0.0,0.0038,0.0038,LLaDA,1.0,0.001,Llama,DISCORD
+qqp,How can I become more {synonym}?,MFT,Taxonomy,0.0971,0.0967,-0.0004,Llama,0.116,0.725,LLaDA,DISCORD
+qqp,Irrelevant modifiers - people,MFT,Vocabulary,0.0,0.0,0.0,Llama,0.0,1.0,LLaDA,DISCORD
+qqp,Irrelevant preamble with different examples.,MFT,Vocabulary,0.0714,0.0,-0.0714,Llama,0.016,1.0,LLaDA,DISCORD
+qqp,Order does matter for asymmetric relations,MFT,SRL,0.4681,0.0,-0.4681,Llama,0.8097,1.0,LLaDA,DISCORD
+qqp,Order does not matter for comparison,MFT,SRL,12.7846,9.1812,-3.6034,Llama,0.9364,0.9394,LLaDA,DISCORD
+qqp,Order does not matter for symmetric relations,MFT,SRL,0.8068,0.0,-0.8068,Llama,0.3545,1.0,LLaDA,DISCORD
+qqp,What are things a {noun} should worry about != should not worry about.,MFT,Negation,0.0,0.0,0.0,Llama,0.0,1.0,LLaDA,DISCORD
+qqp,traditional SRL: active / passive swap with people,MFT,SRL,0.0,0.0,0.0,Llama,0.0,1.0,LLaDA,DISCORD
+qqp,A or B is not the same as C and D,MFT,Logic,0.0,0.0,0.0,Llama,0.0,0.0,tie,agree
+qqp,Different animals,MFT,Vocabulary,0.5623,0.4032,-0.1591,Llama,0.1606,0.1207,Llama,agree
+qqp,Do you have to X your dog before Y it != Do you have to X your dog after Y it.,MFT,Temporal,0.0,0.8843,0.8843,LLaDA,0.0,0.247,LLaDA,agree
+qqp,How can I become a X person != How can I become a person who is not X,MFT,Negation,0.0,0.9315,0.9315,LLaDA,0.0,0.468,LLaDA,agree
+qqp,How can I become a X person == How can I become a person who is not antonym(X),MFT,Negation,0.5576,3.1518,2.5942,LLaDA,0.1695,0.5375,LLaDA,agree
+qqp,How can I become more X != How can I become less X,MFT,Vocabulary,0.0,0.7402,0.7402,LLaDA,0.0,0.9135,LLaDA,agree
+qqp,How can I become more X = How can I become less antonym(X),MFT,Taxonomy,5.726,7.6836,1.9576,LLaDA,0.245,0.3455,LLaDA,agree
+qqp,Irrelevant modifiers - animals,MFT,Vocabulary,0.0,0.0035,0.0035,LLaDA,0.0,0.999,LLaDA,agree
+qqp,"Is it {ok, dangerous, ...} to {smoke, rest, ...} after != before",MFT,Temporal,0.0,0.1034,0.1034,LLaDA,0.0,0.02,LLaDA,agree
+qqp,"Is it {ok, dangerous, ...} to {smoke, rest, ...} in country != Is it {ok, dangerous, ...} not to {smoke, rest, ...} in country",MFT,Negation,0.0,0.5835,0.5835,LLaDA,0.0,0.693,LLaDA,agree
+qqp,Is person X != Did person use to be X,MFT,Temporal,0.1155,0.0323,-0.0833,Llama,0.038,0.009,Llama,agree
+qqp,Is person X != Is person becoming X,MFT,Temporal,0.0215,0.0028,-0.0187,Llama,0.007,0.001,Llama,agree
+qqp,Modifier: adj,MFT,Vocabulary,0.7832,0.0,-0.7832,Llama,0.429,0.0,Llama,agree
+qqp,Preamble is relevant (different injuries),MFT,Vocabulary,0.6174,0.3609,-0.2565,Llama,0.1272,0.0677,Llama,agree
+qqp,Simple coref: his and her,MFT,Coref,0.377,0.0,-0.377,Llama,0.0045,0.0,Llama,agree
+qqp,What was person's life before becoming X != What was person's life after becoming X,MFT,Temporal,0.0,0.0259,0.0259,LLaDA,0.0,0.992,LLaDA,agree
+qqp,Who do X think - Who is the ... according to X,MFT,SRL,0.0,0.2858,0.2858,LLaDA,0.0,0.916,LLaDA,agree
+qqp,a {nationality} {profession} = a {profession} and {nationality},MFT,Logic,0.0,0.2558,0.2558,LLaDA,0.0,0.919,LLaDA,agree
+qqp,different adjectives,MFT,Vocabulary,0.0095,0.0108,0.0012,LLaDA,0.0031,0.0031,tie,agree
+qqp,"same adjectives, different people",MFT,NER,0.0074,0.0,-0.0074,Llama,0.0021,0.0,Llama,agree
+qqp,"same adjectives, different people v2",MFT,NER,0.0642,0.0,-0.0642,Llama,0.0224,0.0,Llama,agree
+qqp,"same adjectives, different people v3",MFT,NER,0.0385,0.0,-0.0385,Llama,0.0131,0.0,Llama,agree
+qqp,traditional SRL: active / passive swap,MFT,SRL,0.0071,0.0095,0.0023,LLaDA,0.002,0.997,LLaDA,agree
+qqp,traditional SRL: wrong active / passive swap,MFT,SRL,0.5664,0.7553,0.1888,LLaDA,0.251,0.475,LLaDA,agree
+qqp,traditional SRL: wrong active / passive swap with people,MFT,SRL,0.1291,0.0133,-0.1158,Llama,0.9575,0.004,Llama,agree
+squad,A is COMP than B. Who is antonym(COMP)? B,MFT,Taxonomy,6.6825,6.5139,-0.1686,Llama,0.0685,0.4617,LLaDA,DISCORD
+squad,A is COMP than B. Who is more / less COMP?,MFT,Vocabulary,9.4771,8.2835,-1.1937,Llama,0.0729,0.1356,LLaDA,DISCORD
+squad,Agent / object distinction,MFT,SRL,8.4136,7.5331,-0.8805,Llama,0.2113,0.992,LLaDA,DISCORD
+squad,Agent / object distinction with 3 agents,MFT,SRL,6.9171,5.5523,-1.3649,Llama,0.5942,1.0,LLaDA,DISCORD
+squad,Animal vs Vehicle v2,MFT,Taxonomy,9.7936,8.8388,-0.9548,Llama,0.0121,1.0,LLaDA,DISCORD
+squad,Understanding before / after -> first / last.,MFT,Temporal,8.7759,5.4239,-3.352,Llama,0.5887,0.8085,LLaDA,DISCORD
+squad,"size, shape, age, color",MFT,Taxonomy,4.9363,4.3031,-0.6332,Llama,0.104,0.15,LLaDA,DISCORD
+squad,A is more X than B. Who is more antonym(X)? B. Who is less X? B. Who is more X? A. Who is less antonym(X)? A.,MFT,Taxonomy,4.0623,4.4575,0.3952,LLaDA,0.6619,1.0,LLaDA,agree
+squad,Animal vs Vehicle,MFT,Taxonomy,10.1639,9.958,-0.206,Llama,0.646,0.208,Llama,agree
+squad,"Basic coref, he / she",MFT,Coref,6.3392,7.5952,1.256,LLaDA,0.9958,1.0,LLaDA,agree
+squad,Former / Latter,MFT,Coref,3.7281,7.9297,4.2016,LLaDA,0.5453,0.7726,LLaDA,agree
+squad,"Intensifiers (very, super, extremely) and reducers (somewhat, kinda, etc)?",MFT,Vocabulary,10.0905,10.8696,0.7791,LLaDA,0.3682,0.8793,LLaDA,agree
+squad,Negation in question only.,MFT,Negation,4.0195,5.9843,1.9648,LLaDA,0.0,0.0,tie,agree
+squad,Profession vs nationality,MFT,Taxonomy,4.4217,4.1724,-0.2493,Llama,0.228,0.0,Llama,agree
+squad,Synonyms,MFT,Taxonomy,4.1065,4.9467,0.8402,LLaDA,0.0313,0.1588,LLaDA,agree

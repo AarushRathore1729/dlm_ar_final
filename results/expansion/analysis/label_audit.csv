@@ -1,0 +1,49 @@
+task,model_key,model,n_examples,majority_label,majority_share,minority_rate,engaged,distribution
+sentiment,llada_instruct,LLaDA-8B,178578,negative,0.4251,0.5749,True,negative:0.425; neutral:0.369; positive:0.206
+sentiment,llada_moe,LLaDA-MoE,178578,negative,0.4894,0.5106,True,negative:0.489; neutral:0.313; positive:0.197
+sentiment,dream,Dream-7B,178578,negative,0.4709,0.5291,True,negative:0.471; neutral:0.278; positive:0.251
+sentiment,llama_instruct,Llama-3.1,178578,negative,0.4737,0.5263,True,negative:0.474; neutral:0.397; positive:0.129
+sentiment,mistral,Mistral-7B,178578,negative,0.4648,0.5352,True,negative:0.465; neutral:0.390; positive:0.145
+sentiment,qwen,Qwen2.5-7B,178578,negative,0.4728,0.5272,True,negative:0.473; neutral:0.374; positive:0.153
+sentiment,gemma,Gemma-2-9B,178578,negative,0.5061,0.4939,True,negative:0.506; neutral:0.278; positive:0.216
+sentiment,olmo,OLMo-2-7B,178578,negative,0.4745,0.5255,True,negative:0.474; neutral:0.352; positive:0.174
+qqp,llada_instruct,LLaDA-8B,207301,not_duplicate,0.5558,0.4442,True,not_duplicate:0.556; duplicate:0.444
+qqp,llada_moe,LLaDA-MoE,207301,duplicate,0.5263,0.4737,True,duplicate:0.526; not_duplicate:0.474
+qqp,dream,Dream-7B,207301,duplicate,0.5327,0.4673,True,duplicate:0.533; not_duplicate:0.467
+qqp,llama_instruct,Llama-3.1,207301,not_duplicate,0.8683,0.1317,True,not_duplicate:0.868; duplicate:0.132
+qqp,mistral,Mistral-7B,207301,not_duplicate,0.7773,0.2227,True,not_duplicate:0.777; duplicate:0.223
+qqp,qwen,Qwen2.5-7B,207301,not_duplicate,0.9843,0.0157,False,not_duplicate:0.984; duplicate:0.016
+qqp,gemma,Gemma-2-9B,207301,duplicate,0.8867,0.1133,True,duplicate:0.887; not_duplicate:0.113
+qqp,olmo,OLMo-2-7B,207301,not_duplicate,0.9478,0.0522,False,not_duplicate:0.948; duplicate:0.052
+paws,llada_instruct,LLaDA-8B,1000,duplicate,0.7340,0.2660,True,duplicate:0.734; not_duplicate:0.266
+paws,llada_moe,LLaDA-MoE,1000,duplicate,0.7080,0.2920,True,duplicate:0.708; not_duplicate:0.292
+paws,dream,Dream-7B,1000,duplicate,0.5290,0.4710,True,duplicate:0.529; not_duplicate:0.471
+paws,llama_instruct,Llama-3.1,1000,not_duplicate,0.6650,0.3350,True,not_duplicate:0.665; duplicate:0.335
+paws,mistral,Mistral-7B,1000,not_duplicate,0.5660,0.4340,True,not_duplicate:0.566; duplicate:0.434
+paws,qwen,Qwen2.5-7B,1000,not_duplicate,0.8480,0.1520,True,not_duplicate:0.848; duplicate:0.152
+paws,gemma,Gemma-2-9B,1000,duplicate,0.6230,0.3770,True,duplicate:0.623; not_duplicate:0.377
+paws,olmo,OLMo-2-7B,1000,not_duplicate,0.8960,0.1040,True,not_duplicate:0.896; duplicate:0.104
+mnli,llada_instruct,LLaDA-8B,1200,entailment,0.4675,0.5325,True,entailment:0.468; contradiction:0.386; neutral:0.147
+mnli,llada_moe,LLaDA-MoE,1200,entailment,0.4358,0.5642,True,entailment:0.436; contradiction:0.363; neutral:0.201
+mnli,dream,Dream-7B,1200,contradiction,0.4242,0.5758,True,contradiction:0.424; entailment:0.399; neutral:0.177
+mnli,llama_instruct,Llama-3.1,1200,entailment,0.6842,0.3158,True,entailment:0.684; contradiction:0.222; neutral:0.094
+mnli,mistral,Mistral-7B,1200,entailment,0.4167,0.5833,True,entailment:0.417; neutral:0.294; contradiction:0.289
+mnli,qwen,Qwen2.5-7B,1200,neutral,0.3342,0.6658,True,neutral:0.334; contradiction:0.333; entailment:0.333
+mnli,gemma,Gemma-2-9B,1200,entailment,0.3667,0.6333,True,entailment:0.367; neutral:0.367; contradiction:0.267
+mnli,olmo,OLMo-2-7B,1200,entailment,0.3900,0.6100,True,entailment:0.390; neutral:0.309; contradiction:0.301
+anli,llada_instruct,LLaDA-8B,1200,contradiction,0.3767,0.6233,True,contradiction:0.377; entailment:0.329; neutral:0.294
+anli,llada_moe,LLaDA-MoE,1200,entailment,0.3833,0.6167,True,entailment:0.383; neutral:0.320; contradiction:0.297
+anli,dream,Dream-7B,1200,contradiction,0.4167,0.5833,True,contradiction:0.417; neutral:0.305; entailment:0.278
+anli,llama_instruct,Llama-3.1,1200,entailment,0.5750,0.4250,True,entailment:0.575; neutral:0.281; contradiction:0.144
+anli,mistral,Mistral-7B,1200,neutral,0.5108,0.4892,True,neutral:0.511; contradiction:0.256; entailment:0.233
+anli,qwen,Qwen2.5-7B,1200,neutral,0.4525,0.5475,True,neutral:0.453; contradiction:0.292; entailment:0.256
+anli,gemma,Gemma-2-9B,1200,neutral,0.5450,0.4550,True,neutral:0.545; contradiction:0.234; entailment:0.221
+anli,olmo,OLMo-2-7B,1200,neutral,0.5775,0.4225,True,neutral:0.578; entailment:0.270; contradiction:0.152
+wildguard,llada_instruct,LLaDA-8B,800,refuse,0.6975,0.3025,True,refuse:0.698; comply:0.302
+wildguard,llada_moe,LLaDA-MoE,800,refuse,0.8938,0.1062,True,refuse:0.894; comply:0.106
+wildguard,dream,Dream-7B,800,refuse,0.9038,0.0962,False,refuse:0.904; comply:0.096
+wildguard,llama_instruct,Llama-3.1,800,refuse,0.5887,0.4113,True,refuse:0.589; comply:0.411
+wildguard,mistral,Mistral-7B,800,comply,0.5500,0.4500,True,comply:0.550; refuse:0.450
+wildguard,qwen,Qwen2.5-7B,800,comply,0.5288,0.4712,True,comply:0.529; refuse:0.471
+wildguard,gemma,Gemma-2-9B,800,refuse,0.5675,0.4325,True,refuse:0.568; comply:0.432
+wildguard,olmo,OLMo-2-7B,800,refuse,0.6388,0.3612,True,refuse:0.639; comply:0.361

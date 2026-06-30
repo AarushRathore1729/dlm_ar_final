@@ -1,0 +1,13 @@
+capability,n_subtests,gap,gap_lo,gap_hi,significance,class
+SRL,10,-1.0977,-3.0213,-0.0282,AR-contract*,surface
+Coref,3,-0.8322,-3.4826,0.7310,ns,surface
+Taxonomy,10,-0.7521,-1.7601,-0.0866,AR-contract*,surface
+NER,16,-0.6647,-1.1492,-0.2617,AR-contract*,surface
+Fairness,4,-0.5537,-0.7419,-0.2863,AR-contract*,surface
+Logic,6,0.0068,-0.1467,0.1243,ns,semantic
+Vocabulary,15,0.1106,-0.1109,0.3438,ns,semantic
+Negation,5,0.1570,0.0302,0.3008,DLM-contract*,semantic
+Robustness,12,0.1965,-1.0517,2.1399,ns,surface
+Temporal,7,0.4239,-0.7601,1.9891,ns,semantic
+ALL semantic,33,0.1652,-0.1030,0.5136,ns,pooled
+ALL surface,55,-0.5725,-1.1162,0.0044,ns,pooled

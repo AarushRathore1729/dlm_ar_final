@@ -1,0 +1,9 @@
+model_key,display_name,model_type,sentiment,qqp,squad,avg
+llada_instruct,LLaDA-8B,DLM,1.6141,1.8068,5.2460,2.8890
+llada_moe,LLaDA-MoE,DLM,1.8072,1.9225,5.2568,2.9955
+dream,Dream-7B,DLM,1.9480,1.5399,5.2262,2.9047
+llama_instruct,Llama-3.1-8B,AR,1.6910,2.0174,5.4123,3.0402
+mistral,Mistral-7B,AR,1.8105,2.4112,5.6255,3.2824
+qwen,Qwen2.5-7B,AR,1.6303,0.8081,5.0321,2.4902
+gemma,Gemma-2-9B,AR,2.0449,0.7113,5.3921,2.7161
+olmo,OLMo-2-7B,AR,1.6291,2.0705,4.9037,2.8677

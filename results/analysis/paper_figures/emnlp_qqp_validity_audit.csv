@@ -1,0 +1,5 @@
+metric,label,value,source
+qwen_majority_label_rate,Qwen majority label rate,98.43,results/expansion/analysis/label_audit.csv
+qwen_dead_pair_weight,Qwen dead pair-weight,54.0,QQP contraction audit compact summary
+qwen_option_order_flips,Qwen option order flips,32.6,results/expansion/analysis/option_order_probe_qwen.json
+dlm_option_order_flips,DLM option order flips,0.1,"results/expansion/analysis/option_order_probe_{llada,llada_moe,dream}.json"

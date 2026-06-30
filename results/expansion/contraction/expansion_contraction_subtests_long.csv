@@ -1,0 +1,705 @@
+task,test_name,test_type,capability,model_key,display_name,model_type,n_pairs,mean_ratio,median_ratio,delta_perp,mean_d_input
+sentiment,intensifiers,DIR,Vocabulary,llada_instruct,LLaDA-8B,DLM,1728,0.1823048250204435,0.0,0.005208333333333333,0.042829701883925334
+sentiment,reducers,DIR,Vocabulary,llada_instruct,LLaDA-8B,DLM,1931,1.2339943852208068,0.0,0.05541170378042465,0.04759591475229446
+sentiment,change neutral words with BERT,INV,Vocabulary,llada_instruct,LLaDA-8B,DLM,1498,1.2077490393440808,0.0,0.06179745600761495,0.06332340613703862
+sentiment,add positive phrases,DIR,Vocabulary,llada_instruct,LLaDA-8B,DLM,3709,8.187412906833408,0.0,0.39165072835304887,0.055900684085037546
+sentiment,add negative phrases,DIR,Vocabulary,llada_instruct,LLaDA-8B,DLM,3866,10.672959745952438,0.0,0.6032457337191977,0.06436429442177766
+sentiment,add random urls and handles,INV,Robustness,llada_instruct,LLaDA-8B,DLM,6516,1.036038023482719,0.0,0.042416597735376864,0.059044563510507214
+sentiment,punctuation,INV,Robustness,llada_instruct,LLaDA-8B,DLM,86,5.760611680259406,0.0,0.16279069767441862,0.034572926371596584
+sentiment,typos,INV,Robustness,llada_instruct,LLaDA-8B,DLM,357,0.7166079997880468,0.0,0.04761946000972716,0.08552790205685698
+sentiment,2 typos,INV,Robustness,llada_instruct,LLaDA-8B,DLM,460,0.8485457773199021,0.0,0.07753501443759254,0.12561360267193422
+sentiment,contractions,INV,Robustness,llada_instruct,LLaDA-8B,DLM,9,0.0,0.0,0.0,0.0254999664094713
+sentiment,change names,INV,NER,llada_instruct,LLaDA-8B,DLM,3042,0.4308825620934359,0.0,0.03528343631906152,0.11574625098963931
+sentiment,change locations,INV,NER,llada_instruct,LLaDA-8B,DLM,9066,0.17821511267122017,0.0,0.0224403538419636,0.1415239788465302
+sentiment,change numbers,INV,NER,llada_instruct,LLaDA-8B,DLM,3463,0.27569882970204296,0.0,0.014462576172718794,0.05640884059170165
+sentiment,"""used to"" should reduce",DIR,Temporal,llada_instruct,LLaDA-8B,DLM,4368,3.412514266147494,0.0,0.31776556776556775,0.09222560792124315
+sentiment,protected: race,INV,Fairness,llada_instruct,LLaDA-8B,DLM,1800,0.8340301950825973,0.0,0.10833333333333334,0.157151557372676
+sentiment,protected: sexual,INV,Fairness,llada_instruct,LLaDA-8B,DLM,7800,0.7297350514970001,0.0,0.08653846153846154,0.1286402337367718
+sentiment,protected: religion,INV,Fairness,llada_instruct,LLaDA-8B,DLM,12600,0.6590377890455564,0.0,0.10198412698412698,0.1736613073377382
+sentiment,protected: nationality,INV,Fairness,llada_instruct,LLaDA-8B,DLM,11400,0.056632043407054966,0.0,0.009649122807017544,0.19689639181944363
+sentiment,intensifiers,DIR,Vocabulary,llada_moe,LLaDA-MoE,DLM,1728,0.3206185865832757,0.0,0.015625,0.042829701883925334
+sentiment,reducers,DIR,Vocabulary,llada_moe,LLaDA-MoE,DLM,1931,3.761554677778067,0.0,0.15484205075090626,0.04759591475229446
+sentiment,change neutral words with BERT,INV,Vocabulary,llada_moe,LLaDA-MoE,DLM,1498,1.4063749182875342,0.0,0.0634527654251524,0.06332340613703862
+sentiment,add positive phrases,DIR,Vocabulary,llada_moe,LLaDA-MoE,DLM,3709,6.851017074132938,0.0,0.32674332867416933,0.055900684085037546
+sentiment,add negative phrases,DIR,Vocabulary,llada_moe,LLaDA-MoE,DLM,3866,8.153434621995691,0.0,0.4947777897874987,0.06436429442177766
+sentiment,add random urls and handles,INV,Robustness,llada_moe,LLaDA-MoE,DLM,6516,1.261443071061947,0.0,0.055089729950700966,0.059044563510507214
+sentiment,punctuation,INV,Robustness,llada_moe,LLaDA-MoE,DLM,86,4.385407984898342,0.0,0.14410064819940302,0.034572926371596584
+sentiment,typos,INV,Robustness,llada_moe,LLaDA-MoE,DLM,357,1.242902528596015,0.0,0.07039531718949978,0.08552790205685698
+sentiment,2 typos,INV,Robustness,llada_moe,LLaDA-MoE,DLM,460,1.0799289123517557,0.0,0.10364773143892703,0.12561360267193422
+sentiment,contractions,INV,Robustness,llada_moe,LLaDA-MoE,DLM,9,3.2984423238184517,0.0,0.08836259278986189,0.0254999664094713
+sentiment,change names,INV,NER,llada_moe,LLaDA-MoE,DLM,3042,0.7347803345967223,0.0,0.05523277978846934,0.11574625098963931
+sentiment,change locations,INV,NER,llada_moe,LLaDA-MoE,DLM,9066,0.4926580147604216,0.0,0.057680801069949494,0.1415239788465302
+sentiment,change numbers,INV,NER,llada_moe,LLaDA-MoE,DLM,3463,0.7979449906946156,0.0,0.03423425798776898,0.05640884059170165
+sentiment,"""used to"" should reduce",DIR,Temporal,llada_moe,LLaDA-MoE,DLM,4368,1.6065033007526859,0.0,0.1559065934065934,0.09222560792124315
+sentiment,protected: race,INV,Fairness,llada_moe,LLaDA-MoE,DLM,1800,1.3880218911210855,0.0,0.19,0.157151557372676
+sentiment,protected: sexual,INV,Fairness,llada_moe,LLaDA-MoE,DLM,7800,2.181884591587223,0.0,0.2591025641025641,0.1286402337367718
+sentiment,protected: religion,INV,Fairness,llada_moe,LLaDA-MoE,DLM,12600,1.283930540151847,0.0,0.19015873015873017,0.1736613073377382
+sentiment,protected: nationality,INV,Fairness,llada_moe,LLaDA-MoE,DLM,11400,0.4026486312634499,0.0,0.07008771929824562,0.19689639181944363
+sentiment,intensifiers,DIR,Vocabulary,dream,Dream-7B,DLM,1728,0.13819593702667254,0.0,0.006944444444444444,0.042829701883925334
+sentiment,reducers,DIR,Vocabulary,dream,Dream-7B,DLM,1931,1.9884788865741898,0.0,0.08337648886587261,0.04759591475229446
+sentiment,change neutral words with BERT,INV,Vocabulary,dream,Dream-7B,DLM,1498,1.0942140653730934,0.0,0.06008010680907877,0.06332340613703862
+sentiment,add positive phrases,DIR,Vocabulary,dream,Dream-7B,DLM,3709,11.838140673955996,0.0,0.5279050957131303,0.055900684085037546
+sentiment,add negative phrases,DIR,Vocabulary,dream,Dream-7B,DLM,3866,11.382954585455607,0.0,0.6544231764097258,0.06436429442177766
+sentiment,add random urls and handles,INV,Robustness,dream,Dream-7B,DLM,6516,1.1146722391517563,0.0,0.048956414978514426,0.059044563510507214
+sentiment,punctuation,INV,Robustness,dream,Dream-7B,DLM,86,3.7836743288898633,0.0,0.12790697674418605,0.034572926371596584
+sentiment,typos,INV,Robustness,dream,Dream-7B,DLM,357,0.33781160103401375,0.0,0.028011204481792718,0.08552790205685698
+sentiment,2 typos,INV,Robustness,dream,Dream-7B,DLM,460,0.8064326302387295,0.0,0.07608695652173914,0.12561360267193422
+sentiment,contractions,INV,Robustness,dream,Dream-7B,DLM,9,0.0,0.0,0.0,0.0254999664094713
+sentiment,change names,INV,NER,dream,Dream-7B,DLM,3042,0.29837623629530485,0.0,0.027284681130834976,0.11574625098963931
+sentiment,change locations,INV,NER,dream,Dream-7B,DLM,9066,0.26933955986991515,0.0,0.03264945951908228,0.1415239788465302
+sentiment,change numbers,INV,NER,dream,Dream-7B,DLM,3463,0.3933227399163605,0.0,0.01963615362402541,0.05640884059170165
+sentiment,"""used to"" should reduce",DIR,Temporal,dream,Dream-7B,DLM,4368,1.790147376590743,0.0,0.17742673992673993,0.09222560792124315
+sentiment,protected: race,INV,Fairness,dream,Dream-7B,DLM,1800,1.0715412187386055,0.0,0.155,0.157151557372676
+sentiment,protected: sexual,INV,Fairness,dream,Dream-7B,DLM,7800,2.398371233671317,0.0,0.27602564102564103,0.1286402337367718
+sentiment,protected: religion,INV,Fairness,dream,Dream-7B,DLM,12600,0.5902285478899468,0.0,0.09206349206349207,0.1736613073377382
+sentiment,protected: nationality,INV,Fairness,dream,Dream-7B,DLM,11400,0.10933756334498859,0.0,0.017368421052631578,0.19689639181944363
+sentiment,intensifiers,DIR,Vocabulary,llama_instruct,Llama-3.1-8B,AR,1728,0.8311549563871103,0.0,0.03819444444444445,0.042829701883925334
+sentiment,reducers,DIR,Vocabulary,llama_instruct,Llama-3.1-8B,AR,1931,6.004367213218486,0.0,0.26929052304505435,0.04759591475229446
+sentiment,change neutral words with BERT,INV,Vocabulary,llama_instruct,Llama-3.1-8B,AR,1498,1.8729806974937575,0.0,0.07543391188251002,0.06332340613703862
+sentiment,add positive phrases,DIR,Vocabulary,llama_instruct,Llama-3.1-8B,AR,3709,7.548200009085638,0.0,0.3704502561337288,0.055900684085037546
+sentiment,add negative phrases,DIR,Vocabulary,llama_instruct,Llama-3.1-8B,AR,3866,10.105781912470087,0.0,0.5711329539575789,0.06436429442177766
+sentiment,add random urls and handles,INV,Robustness,llama_instruct,Llama-3.1-8B,AR,6516,0.7206408185778969,0.0,0.035758133824432166,0.059044563510507214
+sentiment,punctuation,INV,Robustness,llama_instruct,Llama-3.1-8B,AR,86,2.790054848490568,0.0,0.08139534883720931,0.034572926371596584
+sentiment,typos,INV,Robustness,llama_instruct,Llama-3.1-8B,AR,357,1.28853621460741,0.0,0.07282913165266107,0.08552790205685698
+sentiment,2 typos,INV,Robustness,llama_instruct,Llama-3.1-8B,AR,460,0.9417949242444767,0.0,0.09565217391304348,0.12561360267193422
+sentiment,contractions,INV,Robustness,llama_instruct,Llama-3.1-8B,AR,9,0.0,0.0,0.0,0.0254999664094713
+sentiment,change names,INV,NER,llama_instruct,Llama-3.1-8B,AR,3042,0.19008063658692928,0.0,0.0190664036817883,0.11574625098963931
+sentiment,change locations,INV,NER,llama_instruct,Llama-3.1-8B,AR,9066,0.21250715677619983,0.0,0.026803441429516878,0.1415239788465302
+sentiment,change numbers,INV,NER,llama_instruct,Llama-3.1-8B,AR,3463,0.2594229137130481,0.0,0.015015882183078255,0.05640884059170165
+sentiment,"""used to"" should reduce",DIR,Temporal,llama_instruct,Llama-3.1-8B,AR,4368,6.722141504653763,4.033369184696061,0.6146978021978022,0.09222560792124315
+sentiment,protected: race,INV,Fairness,llama_instruct,Llama-3.1-8B,AR,1800,0.3696035284279465,0.0,0.04888888888888889,0.157151557372676
+sentiment,protected: sexual,INV,Fairness,llama_instruct,Llama-3.1-8B,AR,7800,0.16343427770264396,0.0,0.022435897435897436,0.1286402337367718
+sentiment,protected: religion,INV,Fairness,llama_instruct,Llama-3.1-8B,AR,12600,0.07241324369847442,0.0,0.011031746031746031,0.1736613073377382
+sentiment,protected: nationality,INV,Fairness,llama_instruct,Llama-3.1-8B,AR,11400,0.024250228773270807,0.0,0.004912280701754386,0.19689639181944363
+sentiment,intensifiers,DIR,Vocabulary,mistral,Mistral-7B,AR,1728,1.0303863585067508,0.0,0.052083333333333336,0.042829701883925334
+sentiment,reducers,DIR,Vocabulary,mistral,Mistral-7B,AR,1931,2.557961613844854,0.0,0.12221646815121699,0.04759591475229446
+sentiment,change neutral words with BERT,INV,Vocabulary,mistral,Mistral-7B,AR,1498,1.40717552318354,0.0,0.06475300400534045,0.06332340613703862
+sentiment,add positive phrases,DIR,Vocabulary,mistral,Mistral-7B,AR,3709,7.861127140993093,0.0,0.38285252089511995,0.055900684085037546
+sentiment,add negative phrases,DIR,Vocabulary,mistral,Mistral-7B,AR,3866,10.353763240797932,0.0,0.5734609415416451,0.06436429442177766
+sentiment,add random urls and handles,INV,Robustness,mistral,Mistral-7B,AR,6516,1.1262263645003756,0.0,0.04957028852056476,0.059044563510507214
+sentiment,punctuation,INV,Robustness,mistral,Mistral-7B,AR,86,4.480642206946192,0.0,0.1511627906976744,0.034572926371596584
+sentiment,typos,INV,Robustness,mistral,Mistral-7B,AR,357,0.5777680389858273,0.0,0.04201680672268908,0.08552790205685698
+sentiment,2 typos,INV,Robustness,mistral,Mistral-7B,AR,460,0.8404696869654996,0.0,0.08695652173913043,0.12561360267193422
+sentiment,contractions,INV,Robustness,mistral,Mistral-7B,AR,9,0.0,0.0,0.0,0.0254999664094713
+sentiment,change names,INV,NER,mistral,Mistral-7B,AR,3042,0.5012388840697283,0.0,0.052186063956775455,0.11574625098963931
+sentiment,change locations,INV,NER,mistral,Mistral-7B,AR,9066,0.2654481889271605,0.0,0.02911978821972204,0.1415239788465302
+sentiment,change numbers,INV,NER,mistral,Mistral-7B,AR,3463,0.397560330014004,0.0,0.018192318798729425,0.05640884059170165
+sentiment,"""used to"" should reduce",DIR,Temporal,mistral,Mistral-7B,AR,4368,8.485812415395793,0.0,0.7825091575091575,0.09222560792124315
+sentiment,protected: race,INV,Fairness,mistral,Mistral-7B,AR,1800,0.30118571577552483,0.0,0.042777777777777776,0.157151557372676
+sentiment,protected: sexual,INV,Fairness,mistral,Mistral-7B,AR,7800,0.28058865986524784,0.0,0.03641025641025641,0.1286402337367718
+sentiment,protected: religion,INV,Fairness,mistral,Mistral-7B,AR,12600,0.15877219647283666,0.0,0.025714285714285714,0.1736613073377382
+sentiment,protected: nationality,INV,Fairness,mistral,Mistral-7B,AR,11400,0.0,0.0,0.0,0.19689639181944363
+sentiment,intensifiers,DIR,Vocabulary,qwen,Qwen2.5-7B,AR,1728,0.6158012995074063,0.0,0.027199074074074073,0.042829701883925334
+sentiment,reducers,DIR,Vocabulary,qwen,Qwen2.5-7B,AR,1931,4.657904150038992,0.0,0.2154324184360435,0.04759591475229446
+sentiment,change neutral words with BERT,INV,Vocabulary,qwen,Qwen2.5-7B,AR,1498,2.1582624728596196,0.0,0.08878504672897196,0.06332340613703862
+sentiment,add positive phrases,DIR,Vocabulary,qwen,Qwen2.5-7B,AR,3709,4.90861036253029,0.0,0.25101105419250475,0.055900684085037546
+sentiment,add negative phrases,DIR,Vocabulary,qwen,Qwen2.5-7B,AR,3866,9.497159127989482,0.0,0.5561303673047077,0.06436429442177766
+sentiment,add random urls and handles,INV,Robustness,qwen,Qwen2.5-7B,AR,6516,1.357433657443212,0.0,0.06123388581952118,0.059044563510507214
+sentiment,punctuation,INV,Robustness,qwen,Qwen2.5-7B,AR,86,1.4639315065535257,0.0,0.03488372093023256,0.034572926371596584
+sentiment,typos,INV,Robustness,qwen,Qwen2.5-7B,AR,357,0.7260489072248497,0.0,0.04481792717086835,0.08552790205685698
+sentiment,2 typos,INV,Robustness,qwen,Qwen2.5-7B,AR,460,1.0635145324186306,0.0,0.11304347826086956,0.12561360267193422
+sentiment,contractions,INV,Robustness,qwen,Qwen2.5-7B,AR,9,0.0,0.0,0.0,0.0254999664094713
+sentiment,change names,INV,NER,qwen,Qwen2.5-7B,AR,3042,0.3207063290822624,0.0,0.025969756738987507,0.11574625098963931
+sentiment,change locations,INV,NER,qwen,Qwen2.5-7B,AR,9066,0.20435976553313118,0.0,0.025479814692256783,0.1415239788465302
+sentiment,change numbers,INV,NER,qwen,Qwen2.5-7B,AR,3463,0.5996093401949695,0.0,0.025411492925209354,0.05640884059170165
+sentiment,"""used to"" should reduce",DIR,Temporal,qwen,Qwen2.5-7B,AR,4368,5.987759275425352,0.0,0.5471611721611722,0.09222560792124315
+sentiment,protected: race,INV,Fairness,qwen,Qwen2.5-7B,AR,1800,0.5762763239672384,0.0,0.07277777777777777,0.157151557372676
+sentiment,protected: sexual,INV,Fairness,qwen,Qwen2.5-7B,AR,7800,0.5510317455367071,0.0,0.06230769230769231,0.1286402337367718
+sentiment,protected: religion,INV,Fairness,qwen,Qwen2.5-7B,AR,12600,0.4044915561720305,0.0,0.04857142857142857,0.1736613073377382
+sentiment,protected: nationality,INV,Fairness,qwen,Qwen2.5-7B,AR,11400,0.06377222688437811,0.0,0.014035087719298246,0.19689639181944363
+sentiment,intensifiers,DIR,Vocabulary,gemma,Gemma-2-9B,AR,1728,0.17484759781537834,0.0,0.008680555555555556,0.042829701883925334
+sentiment,reducers,DIR,Vocabulary,gemma,Gemma-2-9B,AR,1931,1.5440520338125492,0.0,0.07042982910409114,0.04759591475229446
+sentiment,change neutral words with BERT,INV,Vocabulary,gemma,Gemma-2-9B,AR,1498,1.12394280279103,0.0,0.04739652870493992,0.06332340613703862
+sentiment,add positive phrases,DIR,Vocabulary,gemma,Gemma-2-9B,AR,3709,5.528380107342551,0.0,0.2795901860339714,0.055900684085037546
+sentiment,add negative phrases,DIR,Vocabulary,gemma,Gemma-2-9B,AR,3866,10.881865595842475,0.0,0.6148473874806001,0.06436429442177766
+sentiment,add random urls and handles,INV,Robustness,gemma,Gemma-2-9B,AR,6516,0.6413598978333082,0.0,0.03391651319828115,0.059044563510507214
+sentiment,punctuation,INV,Robustness,gemma,Gemma-2-9B,AR,86,2.975075435442158,0.0,0.08139534883720931,0.034572926371596584
+sentiment,typos,INV,Robustness,gemma,Gemma-2-9B,AR,357,0.36449749113890784,0.0,0.036414565826330535,0.08552790205685698
+sentiment,2 typos,INV,Robustness,gemma,Gemma-2-9B,AR,460,0.6373649070789297,0.0,0.07391304347826087,0.12561360267193422
+sentiment,contractions,INV,Robustness,gemma,Gemma-2-9B,AR,9,0.0,0.0,0.0,0.0254999664094713
+sentiment,change names,INV,NER,gemma,Gemma-2-9B,AR,3042,0.46615557803548635,0.0,0.03385930309007232,0.11574625098963931
+sentiment,change locations,INV,NER,gemma,Gemma-2-9B,AR,9066,0.11235744409392064,0.0,0.01544231193470108,0.1415239788465302
+sentiment,change numbers,INV,NER,gemma,Gemma-2-9B,AR,3463,0.18732112027675998,0.0,0.008663008951775917,0.05640884059170165
+sentiment,"""used to"" should reduce",DIR,Temporal,gemma,Gemma-2-9B,AR,4368,10.752215251681953,9.863098000115976,0.989010989010989,0.09222560792124315
+sentiment,protected: race,INV,Fairness,gemma,Gemma-2-9B,AR,1800,0.8649377246684602,0.0,0.12111111111111111,0.157151557372676
+sentiment,protected: sexual,INV,Fairness,gemma,Gemma-2-9B,AR,7800,1.7532932213702421,0.0,0.18166666666666667,0.1286402337367718
+sentiment,protected: religion,INV,Fairness,gemma,Gemma-2-9B,AR,12600,0.8676719272028525,0.0,0.11738095238095238,0.1736613073377382
+sentiment,protected: nationality,INV,Fairness,gemma,Gemma-2-9B,AR,11400,0.18323220177661664,0.0,0.030789473684210526,0.19689639181944363
+sentiment,intensifiers,DIR,Vocabulary,olmo,OLMo-2-7B,AR,1728,0.4095495362058642,0.0,0.01678240740740741,0.042829701883925334
+sentiment,reducers,DIR,Vocabulary,olmo,OLMo-2-7B,AR,1931,1.6219673012611806,0.0,0.06939409632314862,0.04759591475229446
+sentiment,change neutral words with BERT,INV,Vocabulary,olmo,OLMo-2-7B,AR,1498,1.1608018724160702,0.0,0.0527369826435247,0.06332340613703862
+sentiment,add positive phrases,DIR,Vocabulary,olmo,OLMo-2-7B,AR,3709,10.0489586571353,0.0,0.4818010245349151,0.055900684085037546
+sentiment,add negative phrases,DIR,Vocabulary,olmo,OLMo-2-7B,AR,3866,10.38835332881178,0.0,0.5763062596999483,0.06436429442177766
+sentiment,add random urls and handles,INV,Robustness,olmo,OLMo-2-7B,AR,6516,1.316694899277052,0.0,0.05954573357888275,0.059044563510507214
+sentiment,punctuation,INV,Robustness,olmo,OLMo-2-7B,AR,86,1.451055946293367,0.0,0.06976744186046512,0.034572926371596584
+sentiment,typos,INV,Robustness,olmo,OLMo-2-7B,AR,357,0.9968031728588689,0.0,0.058823529411764705,0.08552790205685698
+sentiment,2 typos,INV,Robustness,olmo,OLMo-2-7B,AR,460,0.795028042060955,0.0,0.09565217391304348,0.12561360267193422
+sentiment,contractions,INV,Robustness,olmo,OLMo-2-7B,AR,9,0.0,0.0,0.0,0.0254999664094713
+sentiment,change names,INV,NER,olmo,OLMo-2-7B,AR,3042,0.37437731230486543,0.0,0.033201840894148585,0.11574625098963931
+sentiment,change locations,INV,NER,olmo,OLMo-2-7B,AR,9066,0.2182325584011284,0.0,0.02702404588572689,0.1415239788465302
+sentiment,change numbers,INV,NER,olmo,OLMo-2-7B,AR,3463,0.19240061100175954,0.0,0.010106843777071902,0.05640884059170165
+sentiment,"""used to"" should reduce",DIR,Temporal,olmo,OLMo-2-7B,AR,4368,3.5997176152624104,0.0,0.3525641025641026,0.09222560792124315
+sentiment,protected: race,INV,Fairness,olmo,OLMo-2-7B,AR,1800,0.2821423674707423,0.0,0.035555555555555556,0.157151557372676
+sentiment,protected: sexual,INV,Fairness,olmo,OLMo-2-7B,AR,7800,0.6385226840279474,0.0,0.07153846153846154,0.1286402337367718
+sentiment,protected: religion,INV,Fairness,olmo,OLMo-2-7B,AR,12600,0.18691741223497138,0.0,0.03,0.1736613073377382
+sentiment,protected: nationality,INV,Fairness,olmo,OLMo-2-7B,AR,11400,0.023828363649032288,0.0,0.0038596491228070177,0.19689639181944363
+qqp,Modifier: adj,MFT,Vocabulary,llada_instruct,LLaDA-8B,DLM,500,0.7832182437609267,1.1399504836277963,0.502,0.6451225705146789
+qqp,different adjectives,MFT,Vocabulary,llada_instruct,LLaDA-8B,DLM,477,0.009528016350716732,0.0,0.006289308176100629,0.6723293188326763
+qqp,Different animals,MFT,Vocabulary,llada_instruct,LLaDA-8B,DLM,464,0.5623228897773661,0.0,0.2823275862068966,0.5225512275536512
+qqp,Irrelevant modifiers - animals,MFT,Vocabulary,llada_instruct,LLaDA-8B,DLM,499,0.0,0.0,0.0,0.4427362756284779
+qqp,Irrelevant modifiers - people,MFT,Vocabulary,llada_instruct,LLaDA-8B,DLM,493,0.0,0.0,0.0,0.6202061270301289
+qqp,Irrelevant preamble with different examples.,MFT,Vocabulary,llada_instruct,LLaDA-8B,DLM,469,0.07138799388743264,0.0,0.031982942430703626,0.4481681480463634
+qqp,Preamble is relevant (different injuries),MFT,Vocabulary,llada_instruct,LLaDA-8B,DLM,487,0.6173042571386916,0.0,0.22587268993839835,0.3972281764052977
+qqp,How can I become more {synonym}?,MFT,Taxonomy,llada_instruct,LLaDA-8B,DLM,3000,0.09717522231441306,0.0,0.029333333333333333,0.21110390118757882
+qqp,Replace synonyms in real pairs,INV,Taxonomy,llada_instruct,LLaDA-8B,DLM,381,0.9997811151992689,0.0,0.07349081364829396,0.09576683939285478
+qqp,How can I become more X != How can I become less X,MFT,Vocabulary,llada_instruct,LLaDA-8B,DLM,1000,0.0,0.0,0.0,0.31575079035758974
+qqp,How can I become more X = How can I become less antonym(X),MFT,Taxonomy,llada_instruct,LLaDA-8B,DLM,325,5.704504361811824,0.0,0.40923076923076923,0.06861008644104004
+qqp,add one typo,INV,Robustness,llada_instruct,LLaDA-8B,DLM,890,0.5490979327021682,0.0,0.05056179775280899,0.13042507650477164
+qqp,contrations,INV,Robustness,llada_instruct,LLaDA-8B,DLM,33,1.0647531945675122,0.0,0.030303030303030304,0.028903486150683777
+qqp,"(q, paraphrase(q))",DIR,Robustness,llada_instruct,LLaDA-8B,DLM,15434,0.01873754883196438,0.0,0.0009070882467280031,0.06372973208169763
+qqp,Product of paraphrases(q1) * paraphrases(q2),INV,Robustness,llada_instruct,LLaDA-8B,DLM,8342,1.2598121111979153,0.0,0.06413330136657876,0.06792713286235903
+qqp,"same adjectives, different people",MFT,NER,llada_instruct,LLaDA-8B,DLM,486,0.0074117778087093,0.0,0.00411522633744856,0.6855554802826157
+qqp,"same adjectives, different people v2",MFT,NER,llada_instruct,LLaDA-8B,DLM,492,0.0642238759189478,0.0,0.044715447154471545,0.6883226986898761
+qqp,"same adjectives, different people v3",MFT,NER,llada_instruct,LLaDA-8B,DLM,495,0.03846559856083758,0.0,0.026262626262626262,0.6634454259968767
+qqp,Change same name in both questions,INV,NER,llada_instruct,LLaDA-8B,DLM,4923,0.14162671513336958,0.0,0.04143814747105423,0.3340222036695664
+qqp,Change same location in both questions,INV,NER,llada_instruct,LLaDA-8B,DLM,4634,0.22793518991159378,0.0,0.05028053517479499,0.2767663231223217
+qqp,Change same number in both questions,INV,NER,llada_instruct,LLaDA-8B,DLM,3999,0.307011573995912,0.0,0.04526131532883221,0.13262572743708445
+qqp,Change first name in one of the questions,DIR,NER,llada_instruct,LLaDA-8B,DLM,9382,2.8172194217782023,0.0,0.36953741206565766,0.16003027535773268
+qqp,Change first and last name in one of the questions,DIR,NER,llada_instruct,LLaDA-8B,DLM,12373,1.8098767751216147,0.0,0.45752848945284086,0.29152421445764853
+qqp,Change location in one of the questions,DIR,NER,llada_instruct,LLaDA-8B,DLM,26787,2.208104957309035,0.0,0.4931869936909695,0.25481859209969226
+qqp,Change numbers in one of the questions,DIR,NER,llada_instruct,LLaDA-8B,DLM,23895,4.2811508362178206,0.0,0.37497384390039756,0.11313599145020818
+qqp,"Keep entitites, fill in with gibberish",DIR,NER,llada_instruct,LLaDA-8B,DLM,4144,0.991490498989141,0.0,0.382480694980695,0.5544835255057893
+qqp,Is person X != Did person use to be X,MFT,Temporal,llada_instruct,LLaDA-8B,DLM,499,0.11553376141331172,0.0,0.07214428857715431,0.6145976204611734
+qqp,Is person X != Is person becoming X,MFT,Temporal,llada_instruct,LLaDA-8B,DLM,500,0.021464926136815925,0.0,0.014,0.6220588815659285
+qqp,What was person's life before becoming X != What was person's life after becoming X,MFT,Temporal,llada_instruct,LLaDA-8B,DLM,500,0.0,0.0,0.0,0.562342913210392
+qqp,Do you have to X your dog before Y it != Do you have to X your dog after Y it.,MFT,Temporal,llada_instruct,LLaDA-8B,DLM,499,0.0,0.0,0.0,0.49166749737305726
+qqp,"Is it {ok, dangerous, ...} to {smoke, rest, ...} after != before",MFT,Temporal,llada_instruct,LLaDA-8B,DLM,499,0.0,0.0,0.0,0.4391049135901885
+qqp,How can I become a X person != How can I become a person who is not X,MFT,Negation,llada_instruct,LLaDA-8B,DLM,497,0.0,0.0,0.0,0.5259346236405478
+qqp,"Is it {ok, dangerous, ...} to {smoke, rest, ...} in country != Is it {ok, dangerous, ...} not to {smoke, rest, ...} in country",MFT,Negation,llada_instruct,LLaDA-8B,DLM,500,0.0,0.0,0.0,0.7183354618474841
+qqp,What are things a {noun} should worry about != should not worry about.,MFT,Negation,llada_instruct,LLaDA-8B,DLM,488,0.0,0.0,0.0,0.44440431483700626
+qqp,How can I become a X person == How can I become a person who is not antonym(X),MFT,Negation,llada_instruct,LLaDA-8B,DLM,1000,0.5577746651493325,0.0,0.169,0.28061532604694367
+qqp,Simple coref: his and her,MFT,Coref,llada_instruct,LLaDA-8B,DLM,95,0.37669020684890797,0.0,0.021052631578947368,0.059907116388019765
+qqp,Who do X think - Who is the ... according to X,MFT,SRL,llada_instruct,LLaDA-8B,DLM,500,0.0,0.0,0.0,0.5863108596205712
+qqp,Order does not matter for comparison,MFT,SRL,llada_instruct,LLaDA-8B,DLM,1880,12.776390815735237,13.47650898912674,0.9329787234042554,0.07797093489702711
+qqp,Order does not matter for symmetric relations,MFT,SRL,llada_instruct,LLaDA-8B,DLM,495,0.8068047375389646,0.0,0.4383838383838384,0.5507475634867495
+qqp,Order does matter for asymmetric relations,MFT,SRL,llada_instruct,LLaDA-8B,DLM,494,0.46813384204741204,0.0,0.2874493927125506,0.6170095903308768
+qqp,traditional SRL: active / passive swap,MFT,SRL,llada_instruct,LLaDA-8B,DLM,500,0.007126971632441499,0.0,0.004,0.6777846931219101
+qqp,traditional SRL: wrong active / passive swap,MFT,SRL,llada_instruct,LLaDA-8B,DLM,500,0.5664207843697723,0.0,0.37,0.6710519025325775
+qqp,traditional SRL: active / passive swap with people,MFT,SRL,llada_instruct,LLaDA-8B,DLM,495,0.0,0.0,0.0,0.6331472024773106
+qqp,traditional SRL: wrong active / passive swap with people,MFT,SRL,llada_instruct,LLaDA-8B,DLM,494,0.12905153749817974,0.0,0.08097165991902834,0.6305122290915142
+qqp,A or B is not the same as C and D,MFT,Logic,llada_instruct,LLaDA-8B,DLM,414,0.0,0.0,0.0,0.5972030875115579
+qqp,A or B is not the same as A and B,MFT,Logic,llada_instruct,LLaDA-8B,DLM,485,0.0,0.0,0.0,0.5723277677273013
+qqp,A and / or B is the same as B and / or A,MFT,Logic,llada_instruct,LLaDA-8B,DLM,485,0.0,0.0,0.0,0.5704125794860505
+qqp,a {nationality} {profession} = a {profession} and {nationality},MFT,Logic,llada_instruct,LLaDA-8B,DLM,500,0.0,0.0,0.0,0.5890467595160007
+qqp,"Symmetry: f(a, b) = f(b, a)",INV,Logic,llada_instruct,LLaDA-8B,DLM,482,0.6873667831975186,0.0,0.08298755186721991,0.3264180486751295
+qqp,Testing implications,DIR,Logic,llada_instruct,LLaDA-8B,DLM,16504,1.1796233735834905,0.0,0.23951769268056228,0.22836082997458518
+qqp,Modifier: adj,MFT,Vocabulary,llada_moe,LLaDA-MoE,DLM,500,0.5567478176499049,0.0,0.354,0.6451225705146789
+qqp,different adjectives,MFT,Vocabulary,llada_moe,LLaDA-MoE,DLM,477,0.012274973523196056,0.0,0.008385744234800839,0.6723293188326763
+qqp,Different animals,MFT,Vocabulary,llada_moe,LLaDA-MoE,DLM,464,0.059442450183028836,0.0,0.03017241379310345,0.5225512275536512
+qqp,Irrelevant modifiers - animals,MFT,Vocabulary,llada_moe,LLaDA-MoE,DLM,499,0.0,0.0,0.0,0.4427362756284779
+qqp,Irrelevant modifiers - people,MFT,Vocabulary,llada_moe,LLaDA-MoE,DLM,493,0.0,0.0,0.0,0.6202061270301289
+qqp,Irrelevant preamble with different examples.,MFT,Vocabulary,llada_moe,LLaDA-MoE,DLM,469,0.4932694099839131,0.0,0.2068230277185501,0.4481681480463634
+qqp,Preamble is relevant (different injuries),MFT,Vocabulary,llada_moe,LLaDA-MoE,DLM,487,0.3284897047425326,0.0,0.11498973305954825,0.3972281764052977
+qqp,How can I become more {synonym}?,MFT,Taxonomy,llada_moe,LLaDA-MoE,DLM,3000,0.05717153733798081,0.0,0.012666666666666666,0.21110390118757882
+qqp,Replace synonyms in real pairs,INV,Taxonomy,llada_moe,LLaDA-MoE,DLM,381,1.6980523297495032,0.0,0.10761154855643044,0.09576683939285478
+qqp,How can I become more X != How can I become less X,MFT,Vocabulary,llada_moe,LLaDA-MoE,DLM,1000,0.20942809688394967,0.0,0.06,0.31575079035758974
+qqp,How can I become more X = How can I become less antonym(X),MFT,Taxonomy,llada_moe,LLaDA-MoE,DLM,325,8.03464444119502,12.245785524510234,0.56,0.06861008644104004
+qqp,add one typo,INV,Robustness,llada_moe,LLaDA-MoE,DLM,890,1.1288052879248638,0.0,0.09213483146067415,0.13042507650477164
+qqp,contrations,INV,Robustness,llada_moe,LLaDA-MoE,DLM,33,4.134510067519542,0.0,0.09090909090909091,0.028903486150683777
+qqp,"(q, paraphrase(q))",DIR,Robustness,llada_moe,LLaDA-MoE,DLM,15434,0.005141574880471093,0.0,0.0002591680704937152,0.06372973208169763
+qqp,Product of paraphrases(q1) * paraphrases(q2),INV,Robustness,llada_moe,LLaDA-MoE,DLM,8342,1.8644044726646634,0.0,0.09014624790218173,0.06792713286235903
+qqp,"same adjectives, different people",MFT,NER,llada_moe,LLaDA-MoE,DLM,486,0.14144990846619795,0.0,0.09465020576131687,0.6855554802826157
+qqp,"same adjectives, different people v2",MFT,NER,llada_moe,LLaDA-MoE,DLM,492,0.2696041418737797,0.0,0.18495934959349594,0.6883226986898761
+qqp,"same adjectives, different people v3",MFT,NER,llada_moe,LLaDA-MoE,DLM,495,0.6390644598207569,0.0,0.4161616161616162,0.6634454259968767
+qqp,Change same name in both questions,INV,NER,llada_moe,LLaDA-MoE,DLM,4923,0.23506672102159037,0.0,0.06601665651025797,0.3340222036695664
+qqp,Change same location in both questions,INV,NER,llada_moe,LLaDA-MoE,DLM,4634,0.31828926783272043,0.0,0.07272334915839447,0.2767663231223217
+qqp,Change same number in both questions,INV,NER,llada_moe,LLaDA-MoE,DLM,3999,0.5508943196330847,0.0,0.04826206551637909,0.13262572743708445
+qqp,Change first name in one of the questions,DIR,NER,llada_moe,LLaDA-MoE,DLM,9382,2.4077599054889984,0.0,0.321786399488382,0.16003027535773268
+qqp,Change first and last name in one of the questions,DIR,NER,llada_moe,LLaDA-MoE,DLM,12373,1.9702796955332254,1.800862023993867,0.5134567202780247,0.29152421445764853
+qqp,Change location in one of the questions,DIR,NER,llada_moe,LLaDA-MoE,DLM,26787,2.6943454353163414,2.7807472733215457,0.6061522380259081,0.25481859209969226
+qqp,Change numbers in one of the questions,DIR,NER,llada_moe,LLaDA-MoE,DLM,23895,4.29050960723505,0.0,0.3790751203180582,0.11313599145020818
+qqp,"Keep entitites, fill in with gibberish",DIR,NER,llada_moe,LLaDA-MoE,DLM,4144,0.998930141672058,0.0,0.4548745173745174,0.5544835255057893
+qqp,Is person X != Did person use to be X,MFT,Temporal,llada_moe,LLaDA-MoE,DLM,499,0.21187940000296726,0.0,0.12625250501002003,0.6145976204611734
+qqp,Is person X != Is person becoming X,MFT,Temporal,llada_moe,LLaDA-MoE,DLM,500,0.8827994305374359,1.311583513811478,0.534,0.6220588815659285
+qqp,What was person's life before becoming X != What was person's life after becoming X,MFT,Temporal,llada_moe,LLaDA-MoE,DLM,500,0.0,0.0,0.0,0.562342913210392
+qqp,Do you have to X your dog before Y it != Do you have to X your dog after Y it.,MFT,Temporal,llada_moe,LLaDA-MoE,DLM,499,0.19758927717788502,0.0,0.07615230460921844,0.49166749737305726
+qqp,"Is it {ok, dangerous, ...} to {smoke, rest, ...} after != before",MFT,Temporal,llada_moe,LLaDA-MoE,DLM,499,0.06211231930742745,0.0,0.028056112224448898,0.4391049135901885
+qqp,How can I become a X person != How can I become a person who is not X,MFT,Negation,llada_moe,LLaDA-MoE,DLM,497,0.28259399064638707,0.0,0.11670020120724346,0.5259346236405478
+qqp,"Is it {ok, dangerous, ...} to {smoke, rest, ...} in country != Is it {ok, dangerous, ...} not to {smoke, rest, ...} in country",MFT,Negation,llada_moe,LLaDA-MoE,DLM,500,0.20081629616153154,0.0,0.142,0.7183354618474841
+qqp,What are things a {noun} should worry about != should not worry about.,MFT,Negation,llada_moe,LLaDA-MoE,DLM,488,0.0,0.0,0.0,0.44440431483700626
+qqp,How can I become a X person == How can I become a person who is not antonym(X),MFT,Negation,llada_moe,LLaDA-MoE,DLM,1000,0.7261574445958419,0.0,0.179,0.28061532604694367
+qqp,Simple coref: his and her,MFT,Coref,llada_moe,LLaDA-MoE,DLM,95,6.588597133129467,0.0,0.3894736842105263,0.059907116388019765
+qqp,Who do X think - Who is the ... according to X,MFT,SRL,llada_moe,LLaDA-MoE,DLM,500,0.0,0.0,0.0,0.5863108596205712
+qqp,Order does not matter for comparison,MFT,SRL,llada_moe,LLaDA-MoE,DLM,1880,13.334309676377655,13.623133657325281,0.9776595744680852,0.07797093489702711
+qqp,Order does not matter for symmetric relations,MFT,SRL,llada_moe,LLaDA-MoE,DLM,495,0.8726700707456182,0.0,0.4727272727272727,0.5507475634867495
+qqp,Order does matter for asymmetric relations,MFT,SRL,llada_moe,LLaDA-MoE,DLM,494,0.11012000133213379,0.0,0.06882591093117409,0.6170095903308768
+qqp,traditional SRL: active / passive swap,MFT,SRL,llada_moe,LLaDA-MoE,DLM,500,0.0,0.0,0.0,0.6777846931219101
+qqp,traditional SRL: wrong active / passive swap,MFT,SRL,llada_moe,LLaDA-MoE,DLM,500,0.01462159887162797,0.0,0.01,0.6710519025325775
+qqp,traditional SRL: active / passive swap with people,MFT,SRL,llada_moe,LLaDA-MoE,DLM,495,0.16572555862976954,0.0,0.09898989898989899,0.6331472024773106
+qqp,traditional SRL: wrong active / passive swap with people,MFT,SRL,llada_moe,LLaDA-MoE,DLM,494,0.020605602212936024,0.0,0.012145748987854251,0.6305122290915142
+qqp,A or B is not the same as C and D,MFT,Logic,llada_moe,LLaDA-MoE,DLM,414,0.014303405022502297,0.0,0.007246376811594203,0.5972030875115579
+qqp,A or B is not the same as A and B,MFT,Logic,llada_moe,LLaDA-MoE,DLM,485,0.0,0.0,0.0,0.5723277677273013
+qqp,A and / or B is the same as B and / or A,MFT,Logic,llada_moe,LLaDA-MoE,DLM,485,0.0,0.0,0.0,0.5704125794860505
+qqp,a {nationality} {profession} = a {profession} and {nationality},MFT,Logic,llada_moe,LLaDA-MoE,DLM,500,0.0,0.0,0.0,0.5890467595160007
+qqp,"Symmetry: f(a, b) = f(b, a)",INV,Logic,llada_moe,LLaDA-MoE,DLM,482,0.6700227705888706,0.0,0.1016597510373444,0.3264180486751295
+qqp,Testing implications,DIR,Logic,llada_moe,LLaDA-MoE,DLM,16504,0.9075454766958266,0.0,0.19286233640329617,0.22836082997458518
+qqp,Modifier: adj,MFT,Vocabulary,dream,Dream-7B,DLM,500,0.7549065655292861,0.5418313715610381,0.47416650080680844,0.6451225705146789
+qqp,different adjectives,MFT,Vocabulary,dream,Dream-7B,DLM,477,0.013823586080371285,0.0,0.008139471088065542,0.6723293188326763
+qqp,Different animals,MFT,Vocabulary,dream,Dream-7B,DLM,464,0.0,0.0,0.0,0.5225512275536512
+qqp,Irrelevant modifiers - animals,MFT,Vocabulary,dream,Dream-7B,DLM,499,0.0,0.0,0.0,0.4427362756284779
+qqp,Irrelevant modifiers - people,MFT,Vocabulary,dream,Dream-7B,DLM,493,0.0,0.0,0.0,0.6202061270301289
+qqp,Irrelevant preamble with different examples.,MFT,Vocabulary,dream,Dream-7B,DLM,469,0.1283889688072987,0.0,0.056493234659817176,0.4481681480463634
+qqp,Preamble is relevant (different injuries),MFT,Vocabulary,dream,Dream-7B,DLM,487,0.6186680947637506,0.0,0.2231977559029444,0.3972281764052977
+qqp,How can I become more {synonym}?,MFT,Taxonomy,dream,Dream-7B,DLM,3000,0.17411979642213946,0.0,0.03863044738769531,0.21110390118757882
+qqp,Replace synonyms in real pairs,INV,Taxonomy,dream,Dream-7B,DLM,381,0.5146904411299923,0.0,0.040312612463483034,0.09576683939285478
+qqp,How can I become more X != How can I become less X,MFT,Vocabulary,dream,Dream-7B,DLM,1000,0.0,0.0,0.0,0.31575079035758974
+qqp,How can I become more X = How can I become less antonym(X),MFT,Taxonomy,dream,Dream-7B,DLM,325,0.0,0.0,0.0,0.06861008644104004
+qqp,add one typo,INV,Robustness,dream,Dream-7B,DLM,890,0.4879303243409673,0.0,0.04012296892953723,0.13042507650477164
+qqp,contrations,INV,Robustness,dream,Dream-7B,DLM,33,0.3269210645041978,0.0,0.006929686575224905,0.028903486150683777
+qqp,"(q, paraphrase(q))",DIR,Robustness,dream,Dream-7B,DLM,15434,0.0033700975934399646,0.0,9.53463456382618e-05,0.06372973208169763
+qqp,Product of paraphrases(q1) * paraphrases(q2),INV,Robustness,dream,Dream-7B,DLM,8342,0.8483507329958554,0.0,0.050047666570374905,0.06792713286235903
+qqp,"same adjectives, different people",MFT,NER,dream,Dream-7B,DLM,486,0.000647438805894232,0.0,0.00047053427362638245,0.6855554802826157
+qqp,"same adjectives, different people v2",MFT,NER,dream,Dream-7B,DLM,492,0.03256682517785804,0.0,0.021919275081254602,0.6883226986898761
+qqp,"same adjectives, different people v3",MFT,NER,dream,Dream-7B,DLM,495,0.032449959752031486,0.0,0.02051790157953898,0.6634454259968767
+qqp,Change same name in both questions,INV,NER,dream,Dream-7B,DLM,4923,0.12365046801239027,0.0,0.038300149788973704,0.3340222036695664
+qqp,Change same location in both questions,INV,NER,dream,Dream-7B,DLM,4634,0.19078751451347506,0.0,0.04619879727032764,0.2767663231223217
+qqp,Change same number in both questions,INV,NER,dream,Dream-7B,DLM,3999,0.4138719895306676,0.0,0.04324961819777521,0.13262572743708445
+qqp,Change first name in one of the questions,DIR,NER,dream,Dream-7B,DLM,9382,2.1933516639809834,0.0,0.29934116344135775,0.16003027535773268
+qqp,Change first and last name in one of the questions,DIR,NER,dream,Dream-7B,DLM,12373,1.992963226218151,2.059983966785289,0.5275338615110848,0.29152421445764853
+qqp,Change location in one of the questions,DIR,NER,dream,Dream-7B,DLM,26787,2.6014280301079804,2.6758167778904496,0.5883079719075289,0.25481859209969226
+qqp,Change numbers in one of the questions,DIR,NER,dream,Dream-7B,DLM,23895,3.8135466234503768,0.0,0.34783716654086566,0.11313599145020818
+qqp,"Keep entitites, fill in with gibberish",DIR,NER,dream,Dream-7B,DLM,4144,1.0361705303542765,0.17039291658363043,0.4463842133721732,0.5544835255057893
+qqp,Is person X != Did person use to be X,MFT,Temporal,dream,Dream-7B,DLM,499,0.7527461374333785,0.46740551398426494,0.441524961519098,0.6145976204611734
+qqp,Is person X != Is person becoming X,MFT,Temporal,dream,Dream-7B,DLM,500,0.7371917351749755,0.525064190756295,0.4542926388680935,0.6220588815659285
+qqp,What was person's life before becoming X != What was person's life after becoming X,MFT,Temporal,dream,Dream-7B,DLM,500,0.002550488542811675,0.0,0.0013269240260124207,0.562342913210392
+qqp,Do you have to X your dog before Y it != Do you have to X your dog after Y it.,MFT,Temporal,dream,Dream-7B,DLM,499,0.04915035445784878,0.0,0.021854351183216655,0.49166749737305726
+qqp,"Is it {ok, dangerous, ...} to {smoke, rest, ...} after != before",MFT,Temporal,dream,Dream-7B,DLM,499,0.0,0.0,0.0,0.4391049135901885
+qqp,How can I become a X person != How can I become a person who is not X,MFT,Negation,dream,Dream-7B,DLM,497,0.35077698313936284,0.0,0.16284626848261122,0.5259346236405478
+qqp,"Is it {ok, dangerous, ...} to {smoke, rest, ...} in country != Is it {ok, dangerous, ...} not to {smoke, rest, ...} in country",MFT,Negation,dream,Dream-7B,DLM,500,0.40414663775045795,0.3259413609161602,0.2859820044636726,0.7183354618474841
+qqp,What are things a {noun} should worry about != should not worry about.,MFT,Negation,dream,Dream-7B,DLM,488,0.0,0.0,0.0,0.44440431483700626
+qqp,How can I become a X person == How can I become a person who is not antonym(X),MFT,Negation,dream,Dream-7B,DLM,1000,0.02613653153845234,0.0,0.0067732143402099605,0.28061532604694367
+qqp,Simple coref: his and her,MFT,Coref,dream,Dream-7B,DLM,95,8.050058087614763,9.402321092250595,0.47613359250520404,0.059907116388019765
+qqp,Who do X think - Who is the ... according to X,MFT,SRL,dream,Dream-7B,DLM,500,0.0,0.0,0.0,0.5863108596205712
+qqp,Order does not matter for comparison,MFT,SRL,dream,Dream-7B,DLM,1880,1.052381828257493,0.0,0.07281496892584131,0.07797093489702711
+qqp,Order does not matter for symmetric relations,MFT,SRL,dream,Dream-7B,DLM,495,0.054441454337564574,0.0,0.029021726774446893,0.5507475634867495
+qqp,Order does matter for asymmetric relations,MFT,SRL,dream,Dream-7B,DLM,494,0.18528280020535395,0.0,0.11229454572142859,0.6170095903308768
+qqp,traditional SRL: active / passive swap,MFT,SRL,dream,Dream-7B,DLM,500,0.0,0.0,0.0,0.6777846931219101
+qqp,traditional SRL: wrong active / passive swap,MFT,SRL,dream,Dream-7B,DLM,500,0.5855509079415184,0.7961323772666222,0.3835952661037445,0.6710519025325775
+qqp,traditional SRL: active / passive swap with people,MFT,SRL,dream,Dream-7B,DLM,495,0.0,0.0,0.0,0.6331472024773106
+qqp,traditional SRL: wrong active / passive swap with people,MFT,SRL,dream,Dream-7B,DLM,494,0.0,0.0,0.0,0.6305122290915142
+qqp,A or B is not the same as C and D,MFT,Logic,dream,Dream-7B,DLM,414,0.055414657508522085,0.0,0.030502104528860194,0.5972030875115579
+qqp,A or B is not the same as A and B,MFT,Logic,dream,Dream-7B,DLM,485,0.0,0.0,0.0,0.5723277677273013
+qqp,A and / or B is the same as B and / or A,MFT,Logic,dream,Dream-7B,DLM,485,0.0,0.0,0.0,0.5704125794860505
+qqp,a {nationality} {profession} = a {profession} and {nationality},MFT,Logic,dream,Dream-7B,DLM,500,0.0,0.0,0.0,0.5890467595160007
+qqp,"Symmetry: f(a, b) = f(b, a)",INV,Logic,dream,Dream-7B,DLM,482,0.2864918762116546,0.0,0.06731864216416704,0.3264180486751295
+qqp,Testing implications,DIR,Logic,dream,Dream-7B,DLM,16504,0.5846770240670445,0.0,0.14329437363641792,0.22836082997458518
+qqp,Modifier: adj,MFT,Vocabulary,llama_instruct,Llama-3.1-8B,AR,500,0.0,0.0,0.0,0.6451225705146789
+qqp,different adjectives,MFT,Vocabulary,llama_instruct,Llama-3.1-8B,AR,477,0.0107612024003366,0.0,0.006289308176100629,0.6723293188326763
+qqp,Different animals,MFT,Vocabulary,llama_instruct,Llama-3.1-8B,AR,464,0.4031721342371069,0.0,0.21120689655172414,0.5225512275536512
+qqp,Irrelevant modifiers - animals,MFT,Vocabulary,llama_instruct,Llama-3.1-8B,AR,499,0.0034641150555077102,0.0,0.002004008016032064,0.4427362756284779
+qqp,Irrelevant modifiers - people,MFT,Vocabulary,llama_instruct,Llama-3.1-8B,AR,493,0.0,0.0,0.0,0.6202061270301289
+qqp,Irrelevant preamble with different examples.,MFT,Vocabulary,llama_instruct,Llama-3.1-8B,AR,469,0.0,0.0,0.0,0.4481681480463634
+qqp,Preamble is relevant (different injuries),MFT,Vocabulary,llama_instruct,Llama-3.1-8B,AR,487,0.36084061755062957,0.0,0.13141683778234087,0.3972281764052977
+qqp,How can I become more {synonym}?,MFT,Taxonomy,llama_instruct,Llama-3.1-8B,AR,3000,0.09671218770927002,0.0,0.029333333333333333,0.21110390118757882
+qqp,Replace synonyms in real pairs,INV,Taxonomy,llama_instruct,Llama-3.1-8B,AR,381,0.6706046065704901,0.0,0.05774278215223097,0.09576683939285478
+qqp,How can I become more X != How can I become less X,MFT,Vocabulary,llama_instruct,Llama-3.1-8B,AR,1000,0.7405234675473371,0.0,0.173,0.31575079035758974
+qqp,How can I become more X = How can I become less antonym(X),MFT,Taxonomy,llama_instruct,Llama-3.1-8B,AR,325,7.667227498707591,0.0,0.49846153846153846,0.06861008644104004
+qqp,add one typo,INV,Robustness,llama_instruct,Llama-3.1-8B,AR,890,0.7632856976188187,0.0,0.07078651685393259,0.13042507650477164
+qqp,contrations,INV,Robustness,llama_instruct,Llama-3.1-8B,AR,33,1.3896912691949825,0.0,0.030303030303030304,0.028903486150683777
+qqp,"(q, paraphrase(q))",DIR,Robustness,llama_instruct,Llama-3.1-8B,AR,15434,12.038504262071227,10.20578346644216,0.603202583510378,0.06372973208169763
+qqp,Product of paraphrases(q1) * paraphrases(q2),INV,Robustness,llama_instruct,Llama-3.1-8B,AR,8342,1.9840992370432837,0.0,0.11915607767921362,0.06792713286235903
+qqp,"same adjectives, different people",MFT,NER,llama_instruct,Llama-3.1-8B,AR,486,0.0,0.0,0.0,0.6855554802826157
+qqp,"same adjectives, different people v2",MFT,NER,llama_instruct,Llama-3.1-8B,AR,492,0.0,0.0,0.0,0.6883226986898761
+qqp,"same adjectives, different people v3",MFT,NER,llama_instruct,Llama-3.1-8B,AR,495,0.0,0.0,0.0,0.6634454259968767
+qqp,Change same name in both questions,INV,NER,llama_instruct,Llama-3.1-8B,AR,4923,0.43173856892559925,0.0,0.1324395693682714,0.3340222036695664
+qqp,Change same location in both questions,INV,NER,llama_instruct,Llama-3.1-8B,AR,4634,0.27299028100358586,0.0,0.06538627535606388,0.2767663231223217
+qqp,Change same number in both questions,INV,NER,llama_instruct,Llama-3.1-8B,AR,3999,0.9886678831668362,0.0,0.08902225556389097,0.13262572743708445
+qqp,Change first name in one of the questions,DIR,NER,llama_instruct,Llama-3.1-8B,AR,9382,1.1313787967626419,0.0,0.14261351524195268,0.16003027535773268
+qqp,Change first and last name in one of the questions,DIR,NER,llama_instruct,Llama-3.1-8B,AR,12373,0.5498875175494697,0.0,0.13885072334922816,0.29152421445764853
+qqp,Change location in one of the questions,DIR,NER,llama_instruct,Llama-3.1-8B,AR,26787,0.45174800467612297,0.0,0.09508343599507224,0.25481859209969226
+qqp,Change numbers in one of the questions,DIR,NER,llama_instruct,Llama-3.1-8B,AR,23895,1.182487004751902,0.0,0.09110692613517472,0.11313599145020818
+qqp,"Keep entitites, fill in with gibberish",DIR,NER,llama_instruct,Llama-3.1-8B,AR,4144,0.24970538771155096,0.0,0.09266409266409266,0.5544835255057893
+qqp,Is person X != Did person use to be X,MFT,Temporal,llama_instruct,Llama-3.1-8B,AR,499,0.03226480907293064,0.0,0.018036072144288578,0.6145976204611734
+qqp,Is person X != Is person becoming X,MFT,Temporal,llama_instruct,Llama-3.1-8B,AR,500,0.0027814536609477836,0.0,0.002,0.6220588815659285
+qqp,What was person's life before becoming X != What was person's life after becoming X,MFT,Temporal,llama_instruct,Llama-3.1-8B,AR,500,0.025888162537860537,0.0,0.016,0.562342913210392
+qqp,Do you have to X your dog before Y it != Do you have to X your dog after Y it.,MFT,Temporal,llama_instruct,Llama-3.1-8B,AR,499,0.8841844528187476,0.0,0.3787575150300601,0.49166749737305726
+qqp,"Is it {ok, dangerous, ...} to {smoke, rest, ...} after != before",MFT,Temporal,llama_instruct,Llama-3.1-8B,AR,499,0.10338477961632282,0.0,0.04008016032064128,0.4391049135901885
+qqp,How can I become a X person != How can I become a person who is not X,MFT,Negation,llama_instruct,Llama-3.1-8B,AR,497,0.9314770199103174,0.0,0.4949698189134809,0.5259346236405478
+qqp,"Is it {ok, dangerous, ...} to {smoke, rest, ...} in country != Is it {ok, dangerous, ...} not to {smoke, rest, ...} in country",MFT,Negation,llama_instruct,Llama-3.1-8B,AR,500,0.5834552258669219,0.0,0.406,0.7183354618474841
+qqp,What are things a {noun} should worry about != should not worry about.,MFT,Negation,llama_instruct,Llama-3.1-8B,AR,488,0.0,0.0,0.0,0.44440431483700626
+qqp,How can I become a X person == How can I become a person who is not antonym(X),MFT,Negation,llama_instruct,Llama-3.1-8B,AR,1000,3.1506228566606036,3.541569686563402,0.827,0.28061532604694367
+qqp,Simple coref: his and her,MFT,Coref,llama_instruct,Llama-3.1-8B,AR,95,0.0,0.0,0.0,0.059907116388019765
+qqp,Who do X think - Who is the ... according to X,MFT,SRL,llama_instruct,Llama-3.1-8B,AR,500,0.2857907600253092,0.0,0.16,0.5863108596205712
+qqp,Order does not matter for comparison,MFT,SRL,llama_instruct,Llama-3.1-8B,AR,1880,9.153193099759216,11.745024903175558,0.6627659574468086,0.07797093489702711
+qqp,Order does not matter for symmetric relations,MFT,SRL,llama_instruct,Llama-3.1-8B,AR,495,0.0,0.0,0.0,0.5507475634867495
+qqp,Order does matter for asymmetric relations,MFT,SRL,llama_instruct,Llama-3.1-8B,AR,494,0.0,0.0,0.0,0.6170095903308768
+qqp,traditional SRL: active / passive swap,MFT,SRL,llama_instruct,Llama-3.1-8B,AR,500,0.009459494539271335,0.0,0.006,0.6777846931219101
+qqp,traditional SRL: wrong active / passive swap,MFT,SRL,llama_instruct,Llama-3.1-8B,AR,500,0.7552379537932378,0.0,0.494,0.6710519025325775
+qqp,traditional SRL: active / passive swap with people,MFT,SRL,llama_instruct,Llama-3.1-8B,AR,495,0.0,0.0,0.0,0.6331472024773106
+qqp,traditional SRL: wrong active / passive swap with people,MFT,SRL,llama_instruct,Llama-3.1-8B,AR,494,0.013279943984833505,0.0,0.008097165991902834,0.6305122290915142
+qqp,A or B is not the same as C and D,MFT,Logic,llama_instruct,Llama-3.1-8B,AR,414,0.0,0.0,0.0,0.5972030875115579
+qqp,A or B is not the same as A and B,MFT,Logic,llama_instruct,Llama-3.1-8B,AR,485,0.003783797127651978,0.0,0.002061855670103093,0.5723277677273013
+qqp,A and / or B is the same as B and / or A,MFT,Logic,llama_instruct,Llama-3.1-8B,AR,485,0.0,0.0,0.0,0.5704125794860505
+qqp,a {nationality} {profession} = a {profession} and {nationality},MFT,Logic,llama_instruct,Llama-3.1-8B,AR,500,0.2557904140522198,0.0,0.146,0.5890467595160007
+qqp,"Symmetry: f(a, b) = f(b, a)",INV,Logic,llama_instruct,Llama-3.1-8B,AR,482,0.5582255173604379,0.0,0.08713692946058091,0.3264180486751295
+qqp,Testing implications,DIR,Logic,llama_instruct,Llama-3.1-8B,AR,16504,0.8566785569392927,0.0,0.15659590618697528,0.22836082997458518
+qqp,Modifier: adj,MFT,Vocabulary,mistral,Mistral-7B,AR,500,0.07153784332065939,0.0,0.04661049401760101,0.6451225705146789
+qqp,different adjectives,MFT,Vocabulary,mistral,Mistral-7B,AR,477,0.014019977130841549,0.0,0.009180323132928813,0.6723293188326763
+qqp,Different animals,MFT,Vocabulary,mistral,Mistral-7B,AR,464,0.013000797737261255,0.0,0.006642655565820891,0.5225512275536512
+qqp,Irrelevant modifiers - animals,MFT,Vocabulary,mistral,Mistral-7B,AR,499,0.7344382243529736,0.0,0.3026052104208417,0.4427362756284779
+qqp,Irrelevant modifiers - people,MFT,Vocabulary,mistral,Mistral-7B,AR,493,0.07318095432850093,0.0,0.04665314401622718,0.6202061270301289
+qqp,Irrelevant preamble with different examples.,MFT,Vocabulary,mistral,Mistral-7B,AR,469,0.09142060593195454,0.0,0.03411513859275053,0.4481681480463634
+qqp,Preamble is relevant (different injuries),MFT,Vocabulary,mistral,Mistral-7B,AR,487,0.18417672129359194,0.0,0.06544842349185591,0.3972281764052977
+qqp,How can I become more {synonym}?,MFT,Taxonomy,mistral,Mistral-7B,AR,3000,0.0,0.0,0.0,0.21110390118757882
+qqp,Replace synonyms in real pairs,INV,Taxonomy,mistral,Mistral-7B,AR,381,0.6493600338608662,0.0,0.04826708885002637,0.09576683939285478
+qqp,How can I become more X != How can I become less X,MFT,Vocabulary,mistral,Mistral-7B,AR,1000,0.7326944386281332,0.0,0.19647414994239806,0.31575079035758974
+qqp,How can I become more X = How can I become less antonym(X),MFT,Taxonomy,mistral,Mistral-7B,AR,325,2.8658681717388914,0.003928436592006413,0.19006767272949218,0.06861008644104004
+qqp,add one typo,INV,Robustness,mistral,Mistral-7B,AR,890,0.8125843194643475,0.0,0.06968310033337453,0.13042507650477164
+qqp,contrations,INV,Robustness,mistral,Mistral-7B,AR,33,2.3513714861511974,0.0,0.10417562181299383,0.028903486150683777
+qqp,"(q, paraphrase(q))",DIR,Robustness,mistral,Mistral-7B,AR,15434,13.900246789724214,11.78874823894797,0.6793443047816509,0.06372973208169763
+qqp,Product of paraphrases(q1) * paraphrases(q2),INV,Robustness,mistral,Mistral-7B,AR,8342,2.679930418278652,0.0,0.1456948296682522,0.06792713286235903
+qqp,"same adjectives, different people",MFT,NER,mistral,Mistral-7B,AR,486,0.05895371437631262,0.0004734098353017644,0.04024239037753133,0.6855554802826157
+qqp,"same adjectives, different people v2",MFT,NER,mistral,Mistral-7B,AR,492,0.0769082714049429,0.0006465183150636319,0.05248535636479292,0.6883226986898761
+qqp,"same adjectives, different people v3",MFT,NER,mistral,Mistral-7B,AR,495,0.04424540355407686,0.0,0.02882229174026335,0.6634454259968767
+qqp,Change same name in both questions,INV,NER,mistral,Mistral-7B,AR,4923,0.3363863511850134,0.0,0.09684250687356646,0.3340222036695664
+qqp,Change same location in both questions,INV,NER,mistral,Mistral-7B,AR,4634,0.3224352835291885,0.0,0.08174082467048704,0.2767663231223217
+qqp,Change same number in both questions,INV,NER,mistral,Mistral-7B,AR,3999,0.7469752660939863,0.0,0.08522404822357657,0.13262572743708445
+qqp,Change first name in one of the questions,DIR,NER,mistral,Mistral-7B,AR,9382,1.0672859634183154,0.0,0.13023205149455813,0.16003027535773268
+qqp,Change first and last name in one of the questions,DIR,NER,mistral,Mistral-7B,AR,12373,0.7107294856870523,0.0,0.15543252623265227,0.29152421445764853
+qqp,Change location in one of the questions,DIR,NER,mistral,Mistral-7B,AR,26787,0.611434845395623,0.0,0.13066224487007552,0.25481859209969226
+qqp,Change numbers in one of the questions,DIR,NER,mistral,Mistral-7B,AR,23895,2.2093829949282324,0.0,0.17355519278537382,0.11313599145020818
+qqp,"Keep entitites, fill in with gibberish",DIR,NER,mistral,Mistral-7B,AR,4144,0.35901834946309386,0.0,0.13505245139642572,0.5544835255057893
+qqp,Is person X != Did person use to be X,MFT,Temporal,mistral,Mistral-7B,AR,499,0.0,0.0,0.0,0.6145976204611734
+qqp,Is person X != Is person becoming X,MFT,Temporal,mistral,Mistral-7B,AR,500,0.0,0.0,0.0,0.6220588815659285
+qqp,What was person's life before becoming X != What was person's life after becoming X,MFT,Temporal,mistral,Mistral-7B,AR,500,0.4399555112082358,0.0,0.248,0.562342913210392
+qqp,Do you have to X your dog before Y it != Do you have to X your dog after Y it.,MFT,Temporal,mistral,Mistral-7B,AR,499,1.1212337957138083,1.00074347333708,0.5020348738453432,0.49166749737305726
+qqp,"Is it {ok, dangerous, ...} to {smoke, rest, ...} after != before",MFT,Temporal,mistral,Mistral-7B,AR,499,1.1004679449836325,0.0,0.4513003028227475,0.4391049135901885
+qqp,How can I become a X person != How can I become a person who is not X,MFT,Negation,mistral,Mistral-7B,AR,497,0.08031156414860995,0.0,0.03861469905860947,0.5259346236405478
+qqp,"Is it {ok, dangerous, ...} to {smoke, rest, ...} in country != Is it {ok, dangerous, ...} not to {smoke, rest, ...} in country",MFT,Negation,mistral,Mistral-7B,AR,500,0.14040446140768,0.0,0.10543976831436157,0.7183354618474841
+qqp,What are things a {noun} should worry about != should not worry about.,MFT,Negation,mistral,Mistral-7B,AR,488,0.0,0.0,0.0,0.44440431483700626
+qqp,How can I become a X person == How can I become a person who is not antonym(X),MFT,Negation,mistral,Mistral-7B,AR,1000,0.6752328741985345,0.0,0.18575519323349,0.28061532604694367
+qqp,Simple coref: his and her,MFT,Coref,mistral,Mistral-7B,AR,95,0.0,0.0,0.0,0.059907116388019765
+qqp,Who do X think - Who is the ... according to X,MFT,SRL,mistral,Mistral-7B,AR,500,0.10277962561518428,0.0,0.056,0.5863108596205712
+qqp,Order does not matter for comparison,MFT,SRL,mistral,Mistral-7B,AR,1880,3.2704993259269726,0.0,0.2540318365109728,0.07797093489702711
+qqp,Order does not matter for symmetric relations,MFT,SRL,mistral,Mistral-7B,AR,495,0.8283227044011838,0.0,0.4444444444444444,0.5507475634867495
+qqp,Order does matter for asymmetric relations,MFT,SRL,mistral,Mistral-7B,AR,494,0.8394669180762891,1.239478913388808,0.5121457489878543,0.6170095903308768
+qqp,traditional SRL: active / passive swap,MFT,SRL,mistral,Mistral-7B,AR,500,0.3678063010756739,0.0,0.244,0.6777846931219101
+qqp,traditional SRL: wrong active / passive swap,MFT,SRL,mistral,Mistral-7B,AR,500,0.6377037582475803,0.0,0.4129218735098839,0.6710519025325775
+qqp,traditional SRL: active / passive swap with people,MFT,SRL,mistral,Mistral-7B,AR,495,0.44098461645714115,0.0,0.277358650920367,0.6331472024773106
+qqp,traditional SRL: wrong active / passive swap with people,MFT,SRL,mistral,Mistral-7B,AR,494,0.5578807226388708,0.0,0.3413253322786648,0.6305122290915142
+qqp,A or B is not the same as C and D,MFT,Logic,mistral,Mistral-7B,AR,414,0.022003306033431366,0.0,0.01321006915419574,0.5972030875115579
+qqp,A or B is not the same as A and B,MFT,Logic,mistral,Mistral-7B,AR,485,0.4082368868355257,0.0,0.2268041237113402,0.5723277677273013
+qqp,A and / or B is the same as B and / or A,MFT,Logic,mistral,Mistral-7B,AR,485,0.09712492440288557,0.0,0.05360824742268041,0.5704125794860505
+qqp,a {nationality} {profession} = a {profession} and {nationality},MFT,Logic,mistral,Mistral-7B,AR,500,0.08272248681833722,0.0,0.04819885110855102,0.5890467595160007
+qqp,"Symmetry: f(a, b) = f(b, a)",INV,Logic,mistral,Mistral-7B,AR,482,1.5775753053829746,0.0,0.14817478813818383,0.3264180486751295
+qqp,Testing implications,DIR,Logic,mistral,Mistral-7B,AR,16504,1.4272329634053007,0.0,0.2407180386362033,0.22836082997458518
+qqp,Modifier: adj,MFT,Vocabulary,qwen,Qwen2.5-7B,AR,500,0.0,0.0,0.0,0.6451225705146789
+qqp,different adjectives,MFT,Vocabulary,qwen,Qwen2.5-7B,AR,477,0.0,0.0,0.0,0.6723293188326763
+qqp,Different animals,MFT,Vocabulary,qwen,Qwen2.5-7B,AR,464,0.0,0.0,0.0,0.5225512275536512
+qqp,Irrelevant modifiers - animals,MFT,Vocabulary,qwen,Qwen2.5-7B,AR,499,0.0,0.0,0.0,0.4427362756284779
+qqp,Irrelevant modifiers - people,MFT,Vocabulary,qwen,Qwen2.5-7B,AR,493,0.0,0.0,0.0,0.6202061270301289
+qqp,Irrelevant preamble with different examples.,MFT,Vocabulary,qwen,Qwen2.5-7B,AR,469,0.0,0.0,0.0,0.4481681480463634
+qqp,Preamble is relevant (different injuries),MFT,Vocabulary,qwen,Qwen2.5-7B,AR,487,0.0,0.0,0.0,0.3972281764052977
+qqp,How can I become more {synonym}?,MFT,Taxonomy,qwen,Qwen2.5-7B,AR,3000,0.28900448306898585,0.0,0.032,0.21110390118757882
+qqp,Replace synonyms in real pairs,INV,Taxonomy,qwen,Qwen2.5-7B,AR,381,0.05572896517410694,0.0,0.0026246719160104987,0.09576683939285478
+qqp,How can I become more X != How can I become less X,MFT,Vocabulary,qwen,Qwen2.5-7B,AR,1000,0.0,0.0,0.0,0.31575079035758974
+qqp,How can I become more X = How can I become less antonym(X),MFT,Taxonomy,qwen,Qwen2.5-7B,AR,325,0.0,0.0,0.0,0.06861008644104004
+qqp,add one typo,INV,Robustness,qwen,Qwen2.5-7B,AR,890,0.12503393795185552,0.0,0.01348314606741573,0.13042507650477164
+qqp,contrations,INV,Robustness,qwen,Qwen2.5-7B,AR,33,0.0,0.0,0.0,0.028903486150683777
+qqp,"(q, paraphrase(q))",DIR,Robustness,qwen,Qwen2.5-7B,AR,15434,6.985770790628214,0.0,0.3373072437475703,0.06372973208169763
+qqp,Product of paraphrases(q1) * paraphrases(q2),INV,Robustness,qwen,Qwen2.5-7B,AR,8342,0.40266046942196304,0.0,0.021697434667945336,0.06792713286235903
+qqp,"same adjectives, different people",MFT,NER,qwen,Qwen2.5-7B,AR,486,0.0,0.0,0.0,0.6855554802826157
+qqp,"same adjectives, different people v2",MFT,NER,qwen,Qwen2.5-7B,AR,492,0.0,0.0,0.0,0.6883226986898761
+qqp,"same adjectives, different people v3",MFT,NER,qwen,Qwen2.5-7B,AR,495,0.0,0.0,0.0,0.6634454259968767
+qqp,Change same name in both questions,INV,NER,qwen,Qwen2.5-7B,AR,4923,0.012074811215835111,0.0,0.0022344099126548854,0.3340222036695664
+qqp,Change same location in both questions,INV,NER,qwen,Qwen2.5-7B,AR,4634,0.003527234919944499,0.0,0.0008631851532153647,0.2767663231223217
+qqp,Change same number in both questions,INV,NER,qwen,Qwen2.5-7B,AR,3999,0.08492738475232701,0.0,0.010502625656414103,0.13262572743708445
+qqp,Change first name in one of the questions,DIR,NER,qwen,Qwen2.5-7B,AR,9382,0.07688847241144676,0.0,0.012257514389256022,0.16003027535773268
+qqp,Change first and last name in one of the questions,DIR,NER,qwen,Qwen2.5-7B,AR,12373,0.04021291437406309,0.0,0.007920471995474016,0.29152421445764853
+qqp,Change location in one of the questions,DIR,NER,qwen,Qwen2.5-7B,AR,26787,0.023748081269851555,0.0,0.004181132638966663,0.25481859209969226
+qqp,Change numbers in one of the questions,DIR,NER,qwen,Qwen2.5-7B,AR,23895,0.21955007363886267,0.0,0.013433772755806653,0.11313599145020818
+qqp,"Keep entitites, fill in with gibberish",DIR,NER,qwen,Qwen2.5-7B,AR,4144,0.02821747836507318,0.0,0.013513513513513514,0.5544835255057893
+qqp,Is person X != Did person use to be X,MFT,Temporal,qwen,Qwen2.5-7B,AR,499,0.0,0.0,0.0,0.6145976204611734
+qqp,Is person X != Is person becoming X,MFT,Temporal,qwen,Qwen2.5-7B,AR,500,0.0,0.0,0.0,0.6220588815659285
+qqp,What was person's life before becoming X != What was person's life after becoming X,MFT,Temporal,qwen,Qwen2.5-7B,AR,500,0.0,0.0,0.0,0.562342913210392
+qqp,Do you have to X your dog before Y it != Do you have to X your dog after Y it.,MFT,Temporal,qwen,Qwen2.5-7B,AR,499,0.0,0.0,0.0,0.49166749737305726
+qqp,"Is it {ok, dangerous, ...} to {smoke, rest, ...} after != before",MFT,Temporal,qwen,Qwen2.5-7B,AR,499,0.0,0.0,0.0,0.4391049135901885
+qqp,How can I become a X person != How can I become a person who is not X,MFT,Negation,qwen,Qwen2.5-7B,AR,497,0.0,0.0,0.0,0.5259346236405478
+qqp,"Is it {ok, dangerous, ...} to {smoke, rest, ...} in country != Is it {ok, dangerous, ...} not to {smoke, rest, ...} in country",MFT,Negation,qwen,Qwen2.5-7B,AR,500,0.0,0.0,0.0,0.7183354618474841
+qqp,What are things a {noun} should worry about != should not worry about.,MFT,Negation,qwen,Qwen2.5-7B,AR,488,0.0,0.0,0.0,0.44440431483700626
+qqp,How can I become a X person == How can I become a person who is not antonym(X),MFT,Negation,qwen,Qwen2.5-7B,AR,1000,0.7582654634929641,0.0,0.212,0.28061532604694367
+qqp,Simple coref: his and her,MFT,Coref,qwen,Qwen2.5-7B,AR,95,0.0,0.0,0.0,0.059907116388019765
+qqp,Who do X think - Who is the ... according to X,MFT,SRL,qwen,Qwen2.5-7B,AR,500,0.1813160366249573,0.0,0.102,0.5863108596205712
+qqp,Order does not matter for comparison,MFT,SRL,qwen,Qwen2.5-7B,AR,1880,0.0,0.0,0.0,0.07797093489702711
+qqp,Order does not matter for symmetric relations,MFT,SRL,qwen,Qwen2.5-7B,AR,495,0.0,0.0,0.0,0.5507475634867495
+qqp,Order does matter for asymmetric relations,MFT,SRL,qwen,Qwen2.5-7B,AR,494,0.0,0.0,0.0,0.6170095903308768
+qqp,traditional SRL: active / passive swap,MFT,SRL,qwen,Qwen2.5-7B,AR,500,0.005855633277283204,0.0,0.004,0.6777846931219101
+qqp,traditional SRL: wrong active / passive swap,MFT,SRL,qwen,Qwen2.5-7B,AR,500,0.0,0.0,0.0,0.6710519025325775
+qqp,traditional SRL: active / passive swap with people,MFT,SRL,qwen,Qwen2.5-7B,AR,495,0.2760776633717931,0.0,0.17373737373737375,0.6331472024773106
+qqp,traditional SRL: wrong active / passive swap with people,MFT,SRL,qwen,Qwen2.5-7B,AR,494,0.0,0.0,0.0,0.6305122290915142
+qqp,A or B is not the same as C and D,MFT,Logic,qwen,Qwen2.5-7B,AR,414,0.0,0.0,0.0,0.5972030875115579
+qqp,A or B is not the same as A and B,MFT,Logic,qwen,Qwen2.5-7B,AR,485,0.0,0.0,0.0,0.5723277677273013
+qqp,A and / or B is the same as B and / or A,MFT,Logic,qwen,Qwen2.5-7B,AR,485,0.0,0.0,0.0,0.5704125794860505
+qqp,a {nationality} {profession} = a {profession} and {nationality},MFT,Logic,qwen,Qwen2.5-7B,AR,500,0.0,0.0,0.0,0.5890467595160007
+qqp,"Symmetry: f(a, b) = f(b, a)",INV,Logic,qwen,Qwen2.5-7B,AR,482,0.11775784025375863,0.0,0.01037344398340249,0.3264180486751295
+qqp,Testing implications,DIR,Logic,qwen,Qwen2.5-7B,AR,16504,0.20339080925251626,0.0,0.03883906931652933,0.22836082997458518
+qqp,Modifier: adj,MFT,Vocabulary,gemma,Gemma-2-9B,AR,500,0.32371184300272854,0.0,0.204,0.6451225705146789
+qqp,different adjectives,MFT,Vocabulary,gemma,Gemma-2-9B,AR,477,0.21525868362595207,0.0,0.14046121593291405,0.6723293188326763
+qqp,Different animals,MFT,Vocabulary,gemma,Gemma-2-9B,AR,464,0.5093265376549213,0.0,0.2607758620689655,0.5225512275536512
+qqp,Irrelevant modifiers - animals,MFT,Vocabulary,gemma,Gemma-2-9B,AR,499,0.009163986829989867,0.0,0.004008016032064128,0.4427362756284779
+qqp,Irrelevant modifiers - people,MFT,Vocabulary,gemma,Gemma-2-9B,AR,493,0.0,0.0,0.0,0.6202061270301289
+qqp,Irrelevant preamble with different examples.,MFT,Vocabulary,gemma,Gemma-2-9B,AR,469,0.0,0.0,0.0,0.4481681480463634
+qqp,Preamble is relevant (different injuries),MFT,Vocabulary,gemma,Gemma-2-9B,AR,487,0.13862665743471267,0.0,0.049281314168377825,0.3972281764052977
+qqp,How can I become more {synonym}?,MFT,Taxonomy,gemma,Gemma-2-9B,AR,3000,0.3127571287894333,0.0,0.06933333333333333,0.21110390118757882
+qqp,Replace synonyms in real pairs,INV,Taxonomy,gemma,Gemma-2-9B,AR,381,0.6940876614140232,0.0,0.06561679790026247,0.09576683939285478
+qqp,How can I become more X != How can I become less X,MFT,Vocabulary,gemma,Gemma-2-9B,AR,1000,0.0,0.0,0.0,0.31575079035758974
+qqp,How can I become more X = How can I become less antonym(X),MFT,Taxonomy,gemma,Gemma-2-9B,AR,325,0.0,0.0,0.0,0.06861008644104004
+qqp,add one typo,INV,Robustness,gemma,Gemma-2-9B,AR,890,0.9421698175142876,0.0,0.06404494382022471,0.13042507650477164
+qqp,contrations,INV,Robustness,gemma,Gemma-2-9B,AR,33,0.92307556874852,0.0,0.030303030303030304,0.028903486150683777
+qqp,"(q, paraphrase(q))",DIR,Robustness,gemma,Gemma-2-9B,AR,15434,0.2464514925790825,0.0,0.013347155630426332,0.06372973208169763
+qqp,Product of paraphrases(q1) * paraphrases(q2),INV,Robustness,gemma,Gemma-2-9B,AR,8342,1.4064634097781588,0.0,0.0667705586190362,0.06792713286235903
+qqp,"same adjectives, different people",MFT,NER,gemma,Gemma-2-9B,AR,486,0.3852758536711557,0.0,0.2674897119341564,0.6855554802826157
+qqp,"same adjectives, different people v2",MFT,NER,gemma,Gemma-2-9B,AR,492,0.18334539807253505,0.0,0.12601626016260162,0.6883226986898761
+qqp,"same adjectives, different people v3",MFT,NER,gemma,Gemma-2-9B,AR,495,0.04450258584736144,0.0,0.030303030303030304,0.6634454259968767
+qqp,Change same name in both questions,INV,NER,gemma,Gemma-2-9B,AR,4923,0.2850179406168697,0.0,0.08023562868169815,0.3340222036695664
+qqp,Change same location in both questions,INV,NER,gemma,Gemma-2-9B,AR,4634,0.2990651635153364,0.0,0.07013379369874838,0.2767663231223217
+qqp,Change same number in both questions,INV,NER,gemma,Gemma-2-9B,AR,3999,0.31618435990566685,0.0,0.0277569392348087,0.13262572743708445
+qqp,Change first name in one of the questions,DIR,NER,gemma,Gemma-2-9B,AR,9382,0.8125436421418691,0.0,0.10477510125772756,0.16003027535773268
+qqp,Change first and last name in one of the questions,DIR,NER,gemma,Gemma-2-9B,AR,12373,0.8462955730146717,0.0,0.2357552735795684,0.29152421445764853
+qqp,Change location in one of the questions,DIR,NER,gemma,Gemma-2-9B,AR,26787,1.2533654427607048,0.0,0.30436405719192144,0.25481859209969226
+qqp,Change numbers in one of the questions,DIR,NER,gemma,Gemma-2-9B,AR,23895,1.120557444571159,0.0,0.08072818581293158,0.11313599145020818
+qqp,"Keep entitites, fill in with gibberish",DIR,NER,gemma,Gemma-2-9B,AR,4144,0.36640641968815224,0.0,0.1759169884169884,0.5544835255057893
+qqp,Is person X != Did person use to be X,MFT,Temporal,gemma,Gemma-2-9B,AR,499,0.050039781513929654,0.0,0.03006012024048096,0.6145976204611734
+qqp,Is person X != Is person becoming X,MFT,Temporal,gemma,Gemma-2-9B,AR,500,0.6555056325452024,0.0,0.4,0.6220588815659285
+qqp,What was person's life before becoming X != What was person's life after becoming X,MFT,Temporal,gemma,Gemma-2-9B,AR,500,0.9578348491525994,1.4255307571984823,0.526,0.562342913210392
+qqp,Do you have to X your dog before Y it != Do you have to X your dog after Y it.,MFT,Temporal,gemma,Gemma-2-9B,AR,499,0.021348998862295767,0.0,0.01002004008016032,0.49166749737305726
+qqp,"Is it {ok, dangerous, ...} to {smoke, rest, ...} after != before",MFT,Temporal,gemma,Gemma-2-9B,AR,499,0.0,0.0,0.0,0.4391049135901885
+qqp,How can I become a X person != How can I become a person who is not X,MFT,Negation,gemma,Gemma-2-9B,AR,497,0.0,0.0,0.0,0.5259346236405478
+qqp,"Is it {ok, dangerous, ...} to {smoke, rest, ...} in country != Is it {ok, dangerous, ...} not to {smoke, rest, ...} in country",MFT,Negation,gemma,Gemma-2-9B,AR,500,0.002549234815851229,0.0,0.002,0.7183354618474841
+qqp,What are things a {noun} should worry about != should not worry about.,MFT,Negation,gemma,Gemma-2-9B,AR,488,0.0,0.0,0.0,0.44440431483700626
+qqp,How can I become a X person == How can I become a person who is not antonym(X),MFT,Negation,gemma,Gemma-2-9B,AR,1000,0.0,0.0,0.0,0.28061532604694367
+qqp,Simple coref: his and her,MFT,Coref,gemma,Gemma-2-9B,AR,95,0.0,0.0,0.0,0.059907116388019765
+qqp,Who do X think - Who is the ... according to X,MFT,SRL,gemma,Gemma-2-9B,AR,500,0.0,0.0,0.0,0.5863108596205712
+qqp,Order does not matter for comparison,MFT,SRL,gemma,Gemma-2-9B,AR,1880,0.0,0.0,0.0,0.07797093489702711
+qqp,Order does not matter for symmetric relations,MFT,SRL,gemma,Gemma-2-9B,AR,495,0.0,0.0,0.0,0.5507475634867495
+qqp,Order does matter for asymmetric relations,MFT,SRL,gemma,Gemma-2-9B,AR,494,0.0,0.0,0.0,0.6170095903308768
+qqp,traditional SRL: active / passive swap,MFT,SRL,gemma,Gemma-2-9B,AR,500,0.0,0.0,0.0,0.6777846931219101
+qqp,traditional SRL: wrong active / passive swap,MFT,SRL,gemma,Gemma-2-9B,AR,500,0.0,0.0,0.0,0.6710519025325775
+qqp,traditional SRL: active / passive swap with people,MFT,SRL,gemma,Gemma-2-9B,AR,495,0.0,0.0,0.0,0.6331472024773106
+qqp,traditional SRL: wrong active / passive swap with people,MFT,SRL,gemma,Gemma-2-9B,AR,494,0.0,0.0,0.0,0.6305122290915142
+qqp,A or B is not the same as C and D,MFT,Logic,gemma,Gemma-2-9B,AR,414,0.09432054358761796,0.0,0.057971014492753624,0.5972030875115579
+qqp,A or B is not the same as A and B,MFT,Logic,gemma,Gemma-2-9B,AR,485,0.0,0.0,0.0,0.5723277677273013
+qqp,A and / or B is the same as B and / or A,MFT,Logic,gemma,Gemma-2-9B,AR,485,0.0,0.0,0.0,0.5704125794860505
+qqp,a {nationality} {profession} = a {profession} and {nationality},MFT,Logic,gemma,Gemma-2-9B,AR,500,0.0,0.0,0.0,0.5890467595160007
+qqp,"Symmetry: f(a, b) = f(b, a)",INV,Logic,gemma,Gemma-2-9B,AR,482,0.5378517063790766,0.0,0.13900414937759337,0.3264180486751295
+qqp,Testing implications,DIR,Logic,gemma,Gemma-2-9B,AR,16504,0.3454157718331125,0.0,0.07689045079980611,0.22836082997458518
+qqp,Modifier: adj,MFT,Vocabulary,olmo,OLMo-2-7B,AR,500,0.0,0.0,0.0,0.6451225705146789
+qqp,different adjectives,MFT,Vocabulary,olmo,OLMo-2-7B,AR,477,0.0,0.0,0.0,0.6723293188326763
+qqp,Different animals,MFT,Vocabulary,olmo,OLMo-2-7B,AR,464,0.0,0.0,0.0,0.5225512275536512
+qqp,Irrelevant modifiers - animals,MFT,Vocabulary,olmo,OLMo-2-7B,AR,499,0.005342848599240915,0.0,0.002004008016032064,0.4427362756284779
+qqp,Irrelevant modifiers - people,MFT,Vocabulary,olmo,OLMo-2-7B,AR,493,0.014766960585590676,0.0,0.008113590263691683,0.6202061270301289
+qqp,Irrelevant preamble with different examples.,MFT,Vocabulary,olmo,OLMo-2-7B,AR,469,0.0,0.0,0.0,0.4481681480463634
+qqp,Preamble is relevant (different injuries),MFT,Vocabulary,olmo,OLMo-2-7B,AR,487,0.0,0.0,0.0,0.3972281764052977
+qqp,How can I become more {synonym}?,MFT,Taxonomy,olmo,OLMo-2-7B,AR,3000,0.12965785258809087,0.0,0.021684214174747467,0.21110390118757882
+qqp,Replace synonyms in real pairs,INV,Taxonomy,olmo,OLMo-2-7B,AR,381,0.4156766225954007,0.0,0.038729153436625724,0.09576683939285478
+qqp,How can I become more X != How can I become less X,MFT,Vocabulary,olmo,OLMo-2-7B,AR,1000,0.0,0.0,0.0,0.31575079035758974
+qqp,How can I become more X = How can I become less antonym(X),MFT,Taxonomy,olmo,OLMo-2-7B,AR,325,0.0,0.0,0.0,0.06861008644104004
+qqp,add one typo,INV,Robustness,olmo,OLMo-2-7B,AR,890,0.4659006625600785,0.0,0.03953103469998649,0.13042507650477164
+qqp,contrations,INV,Robustness,olmo,OLMo-2-7B,AR,33,0.05189444777567357,0.0,0.0011315887624567206,0.028903486150683777
+qqp,"(q, paraphrase(q))",DIR,Robustness,olmo,OLMo-2-7B,AR,15434,15.928046437342182,14.272748308764479,0.7858454688555128,0.06372973208169763
+qqp,Product of paraphrases(q1) * paraphrases(q2),INV,Robustness,olmo,OLMo-2-7B,AR,8342,1.5492480712434582,0.0,0.08115447440669851,0.06792713286235903
+qqp,"same adjectives, different people",MFT,NER,olmo,OLMo-2-7B,AR,486,0.012877333286502809,0.0,0.008679932404938058,0.6855554802826157
+qqp,"same adjectives, different people v2",MFT,NER,olmo,OLMo-2-7B,AR,492,0.005600883600427492,0.0,0.003401247890499549,0.6883226986898761
+qqp,"same adjectives, different people v3",MFT,NER,olmo,OLMo-2-7B,AR,495,0.006903338590626834,0.0,0.004207795436936196,0.6634454259968767
+qqp,Change same name in both questions,INV,NER,olmo,OLMo-2-7B,AR,4923,0.15549547508263684,0.0,0.03805469606989602,0.3340222036695664
+qqp,Change same location in both questions,INV,NER,olmo,OLMo-2-7B,AR,4634,0.1153268133381084,0.0,0.028152784960481902,0.2767663231223217
+qqp,Change same number in both questions,INV,NER,olmo,OLMo-2-7B,AR,3999,0.24441158470714905,0.0,0.03078886545369195,0.13262572743708445
+qqp,Change first name in one of the questions,DIR,NER,olmo,OLMo-2-7B,AR,9382,0.53601765815951,0.0,0.062306689659534197,0.16003027535773268
+qqp,Change first and last name in one of the questions,DIR,NER,olmo,OLMo-2-7B,AR,12373,0.27018181175444117,0.0,0.063409096508156,0.29152421445764853
+qqp,Change location in one of the questions,DIR,NER,olmo,OLMo-2-7B,AR,26787,0.26519088860472995,0.0,0.05545604872315044,0.25481859209969226
+qqp,Change numbers in one of the questions,DIR,NER,olmo,OLMo-2-7B,AR,23895,0.7437876089336358,0.0,0.05081429857044296,0.11313599145020818
+qqp,"Keep entitites, fill in with gibberish",DIR,NER,olmo,OLMo-2-7B,AR,4144,0.15313312735003642,0.0,0.04807392707720226,0.5544835255057893
+qqp,Is person X != Did person use to be X,MFT,Temporal,olmo,OLMo-2-7B,AR,499,0.0,0.0,0.0,0.6145976204611734
+qqp,Is person X != Is person becoming X,MFT,Temporal,olmo,OLMo-2-7B,AR,500,0.0,0.0,0.0,0.6220588815659285
+qqp,What was person's life before becoming X != What was person's life after becoming X,MFT,Temporal,olmo,OLMo-2-7B,AR,500,0.0,0.0,0.0,0.562342913210392
+qqp,Do you have to X your dog before Y it != Do you have to X your dog after Y it.,MFT,Temporal,olmo,OLMo-2-7B,AR,499,0.0,0.0,0.0,0.49166749737305726
+qqp,"Is it {ok, dangerous, ...} to {smoke, rest, ...} after != before",MFT,Temporal,olmo,OLMo-2-7B,AR,499,0.0,0.0,0.0,0.4391049135901885
+qqp,How can I become a X person != How can I become a person who is not X,MFT,Negation,olmo,OLMo-2-7B,AR,497,0.0,0.0,0.0,0.5259346236405478
+qqp,"Is it {ok, dangerous, ...} to {smoke, rest, ...} in country != Is it {ok, dangerous, ...} not to {smoke, rest, ...} in country",MFT,Negation,olmo,OLMo-2-7B,AR,500,0.0,0.0,0.0,0.7183354618474841
+qqp,What are things a {noun} should worry about != should not worry about.,MFT,Negation,olmo,OLMo-2-7B,AR,488,0.0,0.0,0.0,0.44440431483700626
+qqp,How can I become a X person == How can I become a person who is not antonym(X),MFT,Negation,olmo,OLMo-2-7B,AR,1000,0.0,0.0,0.0,0.28061532604694367
+qqp,Simple coref: his and her,MFT,Coref,olmo,OLMo-2-7B,AR,95,0.0,0.0,0.0,0.059907116388019765
+qqp,Who do X think - Who is the ... according to X,MFT,SRL,olmo,OLMo-2-7B,AR,500,0.034594056475317464,0.0,0.02,0.5863108596205712
+qqp,Order does not matter for comparison,MFT,SRL,olmo,OLMo-2-7B,AR,1880,5.620372111639407,0.0,0.3929891769239243,0.07797093489702711
+qqp,Order does not matter for symmetric relations,MFT,SRL,olmo,OLMo-2-7B,AR,495,0.0,0.0,0.0,0.5507475634867495
+qqp,Order does matter for asymmetric relations,MFT,SRL,olmo,OLMo-2-7B,AR,494,0.0,0.0,0.0,0.6170095903308768
+qqp,traditional SRL: active / passive swap,MFT,SRL,olmo,OLMo-2-7B,AR,500,0.0,0.0,0.0,0.6777846931219101
+qqp,traditional SRL: wrong active / passive swap,MFT,SRL,olmo,OLMo-2-7B,AR,500,0.0,0.0,0.0,0.6710519025325775
+qqp,traditional SRL: active / passive swap with people,MFT,SRL,olmo,OLMo-2-7B,AR,495,0.0,0.0,0.0,0.6331472024773106
+qqp,traditional SRL: wrong active / passive swap with people,MFT,SRL,olmo,OLMo-2-7B,AR,494,0.0,0.0,0.0,0.6305122290915142
+qqp,A or B is not the same as C and D,MFT,Logic,olmo,OLMo-2-7B,AR,414,0.0,0.0,0.0,0.5972030875115579
+qqp,A or B is not the same as A and B,MFT,Logic,olmo,OLMo-2-7B,AR,485,0.0,0.0,0.0,0.5723277677273013
+qqp,A and / or B is the same as B and / or A,MFT,Logic,olmo,OLMo-2-7B,AR,485,0.9801811933450426,1.4268467666501123,0.5484536082474227,0.5704125794860505
+qqp,a {nationality} {profession} = a {profession} and {nationality},MFT,Logic,olmo,OLMo-2-7B,AR,500,0.0,0.0,0.0,0.5890467595160007
+qqp,"Symmetry: f(a, b) = f(b, a)",INV,Logic,olmo,OLMo-2-7B,AR,482,0.615700679085848,0.0,0.049107354953575925,0.3264180486751295
+qqp,Testing implications,DIR,Logic,olmo,OLMo-2-7B,AR,16504,0.6658615848590097,0.0,0.09792838052594136,0.22836082997458518
+squad,A is COMP than B. Who is more / less COMP?,MFT,Vocabulary,llada_instruct,LLaDA-8B,DLM,52,9.4746783301519,9.379586872396054,0.6264015146746085,0.06716910004615784
+squad,"Intensifiers (very, super, extremely) and reducers (somewhat, kinda, etc)?",MFT,Vocabulary,llada_instruct,LLaDA-8B,DLM,4859,10.088221946303966,10.587879592190573,0.5873253966683001,0.05926520916679117
+squad,"size, shape, age, color",MFT,Taxonomy,llada_instruct,LLaDA-8B,DLM,2000,4.936371620403161,5.024536228996699,0.6396479886174202,0.13744783189892767
+squad,Profession vs nationality,MFT,Taxonomy,llada_instruct,LLaDA-8B,DLM,12500,4.42203169789383,4.42598524364853,0.7211015867686271,0.16620665135860443
+squad,Animal vs Vehicle,MFT,Taxonomy,llada_instruct,LLaDA-8B,DLM,1799,10.167283628410642,10.065698100191494,0.716462859263713,0.07296489741551737
+squad,Animal vs Vehicle v2,MFT,Taxonomy,llada_instruct,LLaDA-8B,DLM,1624,9.79597386253168,9.71579141348976,0.621566902552479,0.06491725069695506
+squad,Synonyms,MFT,Taxonomy,llada_instruct,LLaDA-8B,DLM,1788,4.106632458310143,4.056572616625687,0.618743367326473,0.1581296028373492
+squad,A is COMP than B. Who is antonym(COMP)? B,MFT,Taxonomy,llada_instruct,LLaDA-8B,DLM,677,6.70686567215012,6.725648815296793,0.5539705266232329,0.09028510654694573
+squad,A is more X than B. Who is more antonym(X)? B. Who is less X? B. Who is more X? A. Who is less antonym(X)? A.,MFT,Taxonomy,llada_instruct,LLaDA-8B,DLM,21656,4.059899107010345,2.5025473977230095,0.31996270650147973,0.09634505132213923
+squad,Question typo,INV,Robustness,llada_instruct,LLaDA-8B,DLM,252,1.2940838667207883,0.00042703551715311697,0.05288012314676529,0.057891482871676246
+squad,Question contractions,INV,Robustness,llada_instruct,LLaDA-8B,DLM,3,0.0,0.0,0.0,0.02838510274887085
+squad,Add random sentence to context,INV,Robustness,llada_instruct,LLaDA-8B,DLM,905,0.6923656566572844,0.0,0.04154084667316458,0.0892650350681326
+squad,Change name everywhere,INV,NER,llada_instruct,LLaDA-8B,DLM,2124,1.6776779989614967,0.0002412783562696402,0.08786649851473978,0.11065359043199463
+squad,Change location everywhere,INV,NER,llada_instruct,LLaDA-8B,DLM,2373,1.4804166360351176,0.0002856190347762245,0.0730429398130627,0.09886026481661775
+squad,Understanding before / after -> first / last.,MFT,Temporal,llada_instruct,LLaDA-8B,DLM,488,8.724666689691595,10.070995234827965,0.5209602158760926,0.06125871971493862
+squad,Negation in question only.,MFT,Negation,llada_instruct,LLaDA-8B,DLM,6063,4.021871636778052,0.0050952286169657895,0.2720137189176046,0.07382206314765795
+squad,"Basic coref, he / she",MFT,Coref,llada_instruct,LLaDA-8B,DLM,7247,6.33850703572594,5.901215212719583,0.5877909911111484,0.10122977925676041
+squad,Former / Latter,MFT,Coref,llada_instruct,LLaDA-8B,DLM,290,3.7298578109815463,0.003932562654878263,0.2173631294020291,0.05929092353787915
+squad,Agent / object distinction,MFT,SRL,llada_instruct,LLaDA-8B,DLM,520,8.446965487325365,8.624386747938875,0.5973570653452323,0.07496086324636753
+squad,Agent / object distinction with 3 agents,MFT,SRL,llada_instruct,LLaDA-8B,DLM,9570,6.90653922823616,8.122546462573872,0.4542019507292047,0.06950419071201495
+squad,A is COMP than B. Who is more / less COMP?,MFT,Vocabulary,llada_moe,LLaDA-MoE,DLM,52,9.474769544244113,9.379586872396054,0.626407369111593,0.06716910004615784
+squad,"Intensifiers (very, super, extremely) and reducers (somewhat, kinda, etc)?",MFT,Vocabulary,llada_moe,LLaDA-MoE,DLM,4859,9.583891430708976,10.364544550894417,0.55945537819382,0.05926520916679117
+squad,"size, shape, age, color",MFT,Taxonomy,llada_moe,LLaDA-MoE,DLM,2000,5.181217241643493,5.04949866499533,0.6731634911596776,0.13744783189892767
+squad,Profession vs nationality,MFT,Taxonomy,llada_moe,LLaDA-MoE,DLM,12500,4.314222912760851,4.383431291947487,0.703082295305729,0.16620665135860443
+squad,Animal vs Vehicle,MFT,Taxonomy,llada_moe,LLaDA-MoE,DLM,1799,10.54603487205936,10.396137338744166,0.7424877363362201,0.07296489741551737
+squad,Animal vs Vehicle v2,MFT,Taxonomy,llada_moe,LLaDA-MoE,DLM,1624,9.791900775991282,9.693791061809907,0.621188362142796,0.06491725069695506
+squad,Synonyms,MFT,Taxonomy,llada_moe,LLaDA-MoE,DLM,1788,4.114058189018277,4.047524338996005,0.6201955881094773,0.1581296028373492
+squad,A is COMP than B. Who is antonym(COMP)? B,MFT,Taxonomy,llada_moe,LLaDA-MoE,DLM,677,6.8097750410886935,6.779933986519352,0.5629180017611125,0.09028510654694573
+squad,A is more X than B. Who is more antonym(X)? B. Who is less X? B. Who is more X? A. Who is less antonym(X)? A.,MFT,Taxonomy,llada_moe,LLaDA-MoE,DLM,21656,4.064456102161623,2.3481721743184236,0.3195828052951862,0.09634505132213923
+squad,Question typo,INV,Robustness,llada_moe,LLaDA-MoE,DLM,252,1.3077968538311784,0.0,0.052461941874334735,0.057891482871676246
+squad,Question contractions,INV,Robustness,llada_moe,LLaDA-MoE,DLM,3,0.0023558663558663558,0.0,6.024042765299479e-05,0.02838510274887085
+squad,Add random sentence to context,INV,Robustness,llada_moe,LLaDA-MoE,DLM,905,0.8600266396149887,0.0,0.05316546527226327,0.0892650350681326
+squad,Change name everywhere,INV,NER,llada_moe,LLaDA-MoE,DLM,2124,2.0330392124960577,0.0017019220161814499,0.10325979815161104,0.11065359043199463
+squad,Change location everywhere,INV,NER,llada_moe,LLaDA-MoE,DLM,2373,1.537731081664022,0.0008738873607126791,0.08548926921256021,0.09886026481661775
+squad,Understanding before / after -> first / last.,MFT,Temporal,llada_moe,LLaDA-MoE,DLM,488,7.415675071769586,9.295040697293377,0.4400460435779857,0.06125871971493862
+squad,Negation in question only.,MFT,Negation,llada_moe,LLaDA-MoE,DLM,6063,4.02190008394617,0.005139237480578463,0.2720151006580677,0.07382206314765795
+squad,"Basic coref, he / she",MFT,Coref,llada_moe,LLaDA-MoE,DLM,7247,7.306863554975441,7.045473491660419,0.671078237086407,0.10122977925676041
+squad,Former / Latter,MFT,Coref,llada_moe,LLaDA-MoE,DLM,290,0.001543731908760321,0.0,8.909620087722252e-05,0.05929092353787915
+squad,Agent / object distinction,MFT,SRL,llada_moe,LLaDA-MoE,DLM,520,7.935752346701506,8.110725470287367,0.5632731821674567,0.07496086324636753
+squad,Agent / object distinction with 3 agents,MFT,SRL,llada_moe,LLaDA-MoE,DLM,9570,6.614080930397374,7.971668621738727,0.43425758575384144,0.06950419071201495
+squad,A is COMP than B. Who is more / less COMP?,MFT,Vocabulary,dream,Dream-7B,DLM,52,9.47494083562092,9.379114336006467,0.6264201746537135,0.06716910004615784
+squad,"Intensifiers (very, super, extremely) and reducers (somewhat, kinda, etc)?",MFT,Vocabulary,dream,Dream-7B,DLM,4859,9.818575994154118,10.43276367128638,0.5716323953387938,0.05926520916679117
+squad,"size, shape, age, color",MFT,Taxonomy,dream,Dream-7B,DLM,2000,5.058872367891825,5.026752664536883,0.6575034514218568,0.13744783189892767
+squad,Profession vs nationality,MFT,Taxonomy,dream,Dream-7B,DLM,12500,4.1474672198081555,4.335960276027529,0.6758286439388991,0.16620665135860443
+squad,Animal vs Vehicle,MFT,Taxonomy,dream,Dream-7B,DLM,1799,9.952439209311242,9.88157830206569,0.7020454493544379,0.07296489741551737
+squad,Animal vs Vehicle v2,MFT,Taxonomy,dream,Dream-7B,DLM,1624,9.764867032553918,9.692395060576011,0.6193627705659919,0.06491725069695506
+squad,Synonyms,MFT,Taxonomy,dream,Dream-7B,DLM,1788,4.08162148552509,4.044077821831605,0.6148730287415869,0.1581296028373492
+squad,A is COMP than B. Who is antonym(COMP)? B,MFT,Taxonomy,dream,Dream-7B,DLM,677,6.768614823092209,6.769874137795258,0.5595127591750471,0.09028510654694573
+squad,A is more X than B. Who is more antonym(X)? B. Who is less X? B. Who is more X? A. Who is less antonym(X)? A.,MFT,Taxonomy,dream,Dream-7B,DLM,21656,4.0930376840220735,2.8381533111819612,0.3235957221058206,0.09634505132213923
+squad,Question typo,INV,Robustness,dream,Dream-7B,DLM,252,0.3494456124352713,0.0,0.018928460422016326,0.057891482871676246
+squad,Question contractions,INV,Robustness,dream,Dream-7B,DLM,3,10.110080031080031,0.0,0.25851871569951373,0.02838510274887085
+squad,Add random sentence to context,INV,Robustness,dream,Dream-7B,DLM,905,0.3188822853310928,0.0,0.021701489940532663,0.0892650350681326
+squad,Change name everywhere,INV,NER,dream,Dream-7B,DLM,2124,1.2790148596957391,0.00012177358942352977,0.05904601812502983,0.11065359043199463
+squad,Change location everywhere,INV,NER,dream,Dream-7B,DLM,2373,1.4143208059055576,0.0001275130700896842,0.0713866627274738,0.09886026481661775
+squad,Understanding before / after -> first / last.,MFT,Temporal,dream,Dream-7B,DLM,488,8.527203261461858,9.877577005293409,0.5057255976573855,0.06125871971493862
+squad,Negation in question only.,MFT,Negation,dream,Dream-7B,DLM,6063,4.026201820928285,0.005042114479118369,0.2722497561520404,0.07382206314765795
+squad,"Basic coref, he / she",MFT,Coref,dream,Dream-7B,DLM,7247,7.3722413557616635,7.0858617600397515,0.6776227001977226,0.10122977925676041
+squad,Former / Latter,MFT,Coref,dream,Dream-7B,DLM,290,0.9047525193708656,0.0,0.054408444361440066,0.05929092353787915
+squad,Agent / object distinction,MFT,SRL,dream,Dream-7B,DLM,520,8.456323402603017,8.511009640667083,0.5984652532694431,0.07496086324636753
+squad,Agent / object distinction with 3 agents,MFT,SRL,dream,Dream-7B,DLM,9570,6.660351397252527,8.003844177099095,0.43772062218340274,0.06950419071201495
+squad,A is COMP than B. Who is more / less COMP?,MFT,Vocabulary,llama_instruct,Llama-3.1-8B,AR,52,8.280859813602829,9.21208218732886,0.5380611840922099,0.06716910004615784
+squad,"Intensifiers (very, super, extremely) and reducers (somewhat, kinda, etc)?",MFT,Vocabulary,llama_instruct,Llama-3.1-8B,AR,4859,10.859675017199082,11.537892920463495,0.6312219622529802,0.05926520916679117
+squad,"size, shape, age, color",MFT,Taxonomy,llama_instruct,Llama-3.1-8B,AR,2000,4.303375188096367,4.615736394631643,0.5787546826377511,0.13744783189892767
+squad,Profession vs nationality,MFT,Taxonomy,llama_instruct,Llama-3.1-8B,AR,12500,4.172746402465974,4.378680236781987,0.6787851901364327,0.16620665135860443
+squad,Animal vs Vehicle,MFT,Taxonomy,llama_instruct,Llama-3.1-8B,AR,1799,9.958001074337256,10.12392002655716,0.6987667458878417,0.07296489741551737
+squad,Animal vs Vehicle v2,MFT,Taxonomy,llama_instruct,Llama-3.1-8B,AR,1624,8.843970290928079,9.908338549123823,0.5650340316179461,0.06491725069695506
+squad,Synonyms,MFT,Taxonomy,llama_instruct,Llama-3.1-8B,AR,1788,4.946938275969464,4.874669881222722,0.7532745865585129,0.1581296028373492
+squad,A is COMP than B. Who is antonym(COMP)? B,MFT,Taxonomy,llama_instruct,Llama-3.1-8B,AR,677,6.513105127641951,6.4722627928883,0.5398159569000036,0.09028510654694573
+squad,A is more X than B. Who is more antonym(X)? B. Who is less X? B. Who is more X? A. Who is less antonym(X)? A.,MFT,Taxonomy,llama_instruct,Llama-3.1-8B,AR,21656,4.457667415758925,4.245855038957004,0.3536401115303517,0.09634505132213923
+squad,Question typo,INV,Robustness,llama_instruct,Llama-3.1-8B,AR,252,0.3281676456245479,0.0,0.015467960919652666,0.057891482871676246
+squad,Question contractions,INV,Robustness,llama_instruct,Llama-3.1-8B,AR,3,0.0,0.0,0.0,0.02838510274887085
+squad,Add random sentence to context,INV,Robustness,llama_instruct,Llama-3.1-8B,AR,905,0.3019384893029328,0.0,0.02365885004401207,0.0892650350681326
+squad,Change name everywhere,INV,NER,llama_instruct,Llama-3.1-8B,AR,2124,1.5828324532583895,0.00019756808538833758,0.07019721062743436,0.11065359043199463
+squad,Change location everywhere,INV,NER,llama_instruct,Llama-3.1-8B,AR,2373,1.1207847914884148,0.0,0.06140574057783902,0.09886026481661775
+squad,Understanding before / after -> first / last.,MFT,Temporal,llama_instruct,Llama-3.1-8B,AR,488,5.39579850510405,5.778890879944312,0.32133558343668456,0.06125871971493862
+squad,Negation in question only.,MFT,Negation,llama_instruct,Llama-3.1-8B,AR,6063,5.983389770195868,4.8103112807588175,0.4111019140011111,0.07382206314765795
+squad,"Basic coref, he / she",MFT,Coref,llama_instruct,Llama-3.1-8B,AR,7247,7.592924502213218,7.226181582916746,0.7054716334491249,0.10122977925676041
+squad,Former / Latter,MFT,Coref,llama_instruct,Llama-3.1-8B,AR,290,7.847525533772498,11.284084870664337,0.46351643258641506,0.05929092353787915
+squad,Agent / object distinction,MFT,SRL,llama_instruct,Llama-3.1-8B,AR,520,7.519621586588644,7.490958967794322,0.5405671098197882,0.07496086324636753
+squad,Agent / object distinction with 3 agents,MFT,SRL,llama_instruct,Llama-3.1-8B,AR,9570,5.546735965734756,5.493210241596174,0.3624286981688787,0.06950419071201495
+squad,A is COMP than B. Who is more / less COMP?,MFT,Vocabulary,mistral,Mistral-7B,AR,52,9.474972374197625,9.379114336006467,0.6264220163799249,0.06716910004615784
+squad,"Intensifiers (very, super, extremely) and reducers (somewhat, kinda, etc)?",MFT,Vocabulary,mistral,Mistral-7B,AR,4859,14.157230583119157,15.060157479656613,0.8227510981733812,0.05926520916679117
+squad,"size, shape, age, color",MFT,Taxonomy,mistral,Mistral-7B,AR,2000,4.659745582315915,4.8449151668321715,0.6178536991830915,0.13744783189892767
+squad,Profession vs nationality,MFT,Taxonomy,mistral,Mistral-7B,AR,12500,4.421710906092115,4.418878713955918,0.7207585400752723,0.16620665135860443
+squad,Animal vs Vehicle,MFT,Taxonomy,mistral,Mistral-7B,AR,1799,9.885337237296831,9.851887792708043,0.6964750246348282,0.07296489741551737
+squad,Animal vs Vehicle v2,MFT,Taxonomy,mistral,Mistral-7B,AR,1624,7.965573352963313,8.43572038220832,0.5066996243727288,0.06491725069695506
+squad,Synonyms,MFT,Taxonomy,mistral,Mistral-7B,AR,1788,4.231367088946503,4.120101659972902,0.6395896239970837,0.1581296028373492
+squad,A is COMP than B. Who is antonym(COMP)? B,MFT,Taxonomy,mistral,Mistral-7B,AR,677,6.886984287576609,6.779933986519352,0.5678500859493298,0.09028510654694573
+squad,A is more X than B. Who is more antonym(X)? B. Who is less X? B. Who is more X? A. Who is less antonym(X)? A.,MFT,Taxonomy,mistral,Mistral-7B,AR,21656,4.393189810286461,3.417425487146251,0.34533133927050125,0.09634505132213923
+squad,Question typo,INV,Robustness,mistral,Mistral-7B,AR,252,0.6860382385450047,0.0,0.032398057687613696,0.057891482871676246
+squad,Question contractions,INV,Robustness,mistral,Mistral-7B,AR,3,0.0,0.0,0.0,0.02838510274887085
+squad,Add random sentence to context,INV,Robustness,mistral,Mistral-7B,AR,905,0.6504199675430539,0.0001923874955980412,0.04612069424673997,0.0892650350681326
+squad,Change name everywhere,INV,NER,mistral,Mistral-7B,AR,2124,1.6482412528021333,0.0006701998803251988,0.0848012241638369,0.11065359043199463
+squad,Change location everywhere,INV,NER,mistral,Mistral-7B,AR,2373,1.5904180206420215,0.00040154447522510345,0.0875908136995744,0.09886026481661775
+squad,Understanding before / after -> first / last.,MFT,Temporal,mistral,Mistral-7B,AR,488,5.48668690764059,5.549606277888359,0.3270378179512307,0.06125871971493862
+squad,Negation in question only.,MFT,Negation,mistral,Mistral-7B,AR,6063,4.027448962212829,0.005258820225440943,0.2724059782498311,0.07382206314765795
+squad,"Basic coref, he / she",MFT,Coref,mistral,Mistral-7B,AR,7247,7.568684862990263,7.314103599468963,0.6974742076201235,0.10122977925676041
+squad,Former / Latter,MFT,Coref,mistral,Mistral-7B,AR,290,0.0016100752995049225,0.0,9.405715712185563e-05,0.05929092353787915
+squad,Agent / object distinction,MFT,SRL,mistral,Mistral-7B,AR,520,8.214326578911455,8.423043713794588,0.5863571680509128,0.07496086324636753
+squad,Agent / object distinction with 3 agents,MFT,SRL,mistral,Mistral-7B,AR,9570,6.871823371427521,7.514737995069893,0.4494301890880901,0.06950419071201495
+squad,A is COMP than B. Who is more / less COMP?,MFT,Vocabulary,qwen,Qwen2.5-7B,AR,52,9.474500365100912,9.379313524865232,0.6263891911277404,0.06716910004615784
+squad,"Intensifiers (very, super, extremely) and reducers (somewhat, kinda, etc)?",MFT,Vocabulary,qwen,Qwen2.5-7B,AR,4859,9.395615825311832,10.293964983986884,0.5485931381607747,0.05926520916679117
+squad,"size, shape, age, color",MFT,Taxonomy,qwen,Qwen2.5-7B,AR,2000,4.999045283151734,5.0066771354897375,0.6495899906214326,0.13744783189892767
+squad,Profession vs nationality,MFT,Taxonomy,qwen,Qwen2.5-7B,AR,12500,4.096988260851635,4.302202125997409,0.666669208701849,0.16620665135860443
+squad,Animal vs Vehicle,MFT,Taxonomy,qwen,Qwen2.5-7B,AR,1799,9.94009953070369,9.854020455892856,0.7015536547021908,0.07296489741551737
+squad,Animal vs Vehicle v2,MFT,Taxonomy,qwen,Qwen2.5-7B,AR,1624,8.631399761404596,9.183657541891542,0.5485891692358725,0.06491725069695506
+squad,Synonyms,MFT,Taxonomy,qwen,Qwen2.5-7B,AR,1788,4.113969483811839,4.047524338996005,0.6201810865127534,0.1581296028373492
+squad,A is COMP than B. Who is antonym(COMP)? B,MFT,Taxonomy,qwen,Qwen2.5-7B,AR,677,6.804660675445095,6.688449287384265,0.5620951183866627,0.09028510654694573
+squad,A is more X than B. Who is more antonym(X)? B. Who is less X? B. Who is more X? A. Who is less antonym(X)? A.,MFT,Taxonomy,qwen,Qwen2.5-7B,AR,21656,3.9677462097486194,0.009278006406482388,0.3150860386903012,0.09634505132213923
+squad,Question typo,INV,Robustness,qwen,Qwen2.5-7B,AR,252,0.43986239824947193,0.0,0.01904710932146935,0.057891482871676246
+squad,Question contractions,INV,Robustness,qwen,Qwen2.5-7B,AR,3,0.0023558663558663558,0.0,6.024042765299479e-05,0.02838510274887085
+squad,Add random sentence to context,INV,Robustness,qwen,Qwen2.5-7B,AR,905,0.37291399858405566,0.0,0.027207093558258774,0.0892650350681326
+squad,Change name everywhere,INV,NER,qwen,Qwen2.5-7B,AR,2124,1.5226529412607301,0.0,0.0715965857473246,0.11065359043199463
+squad,Change location everywhere,INV,NER,qwen,Qwen2.5-7B,AR,2373,1.2292377032560553,0.0003174318945800539,0.06648509285706686,0.09886026481661775
+squad,Understanding before / after -> first / last.,MFT,Temporal,qwen,Qwen2.5-7B,AR,488,6.834377582394876,8.640735862407112,0.40838820652150715,0.06125871971493862
+squad,Negation in question only.,MFT,Negation,qwen,Qwen2.5-7B,AR,6063,4.021715106807598,0.004840553210297686,0.272002475127595,0.07382206314765795
+squad,"Basic coref, he / she",MFT,Coref,qwen,Qwen2.5-7B,AR,7247,6.608253689511761,6.2139797145286275,0.6065021932137429,0.10122977925676041
+squad,Former / Latter,MFT,Coref,qwen,Qwen2.5-7B,AR,290,1.421487928732583,0.0,0.08326614845929475,0.05929092353787915
+squad,Agent / object distinction,MFT,SRL,qwen,Qwen2.5-7B,AR,520,7.222444430991767,7.831187391682092,0.5191326467463604,0.07496086324636753
+squad,Agent / object distinction with 3 agents,MFT,SRL,qwen,Qwen2.5-7B,AR,9570,6.57210571997622,7.752967799743525,0.43062733690738053,0.06950419071201495
+squad,A is COMP than B. Who is more / less COMP?,MFT,Vocabulary,gemma,Gemma-2-9B,AR,52,9.474519932488176,9.379313524865232,0.6263905603152055,0.06716910004615784
+squad,"Intensifiers (very, super, extremely) and reducers (somewhat, kinda, etc)?",MFT,Vocabulary,gemma,Gemma-2-9B,AR,4859,12.169638099928731,12.1506792480459,0.7086903391312789,0.05926520916679117
+squad,"size, shape, age, color",MFT,Taxonomy,gemma,Gemma-2-9B,AR,2000,4.819678000856465,4.916266850547972,0.6318824618272484,0.13744783189892767
+squad,Profession vs nationality,MFT,Taxonomy,gemma,Gemma-2-9B,AR,12500,4.396462305634276,4.412423833678445,0.7164778785741329,0.16620665135860443
+squad,Animal vs Vehicle,MFT,Taxonomy,gemma,Gemma-2-9B,AR,1799,9.741974434878406,9.781397483511423,0.6862146000420802,0.07296489741551737
+squad,Animal vs Vehicle v2,MFT,Taxonomy,gemma,Gemma-2-9B,AR,1624,10.502284723143003,10.551090882869211,0.6682487499786615,0.06491725069695506
+squad,Synonyms,MFT,Taxonomy,gemma,Gemma-2-9B,AR,1788,4.147490811895132,4.072119287983046,0.6260175080824085,0.1581296028373492
+squad,A is COMP than B. Who is antonym(COMP)? B,MFT,Taxonomy,gemma,Gemma-2-9B,AR,677,6.806312140390454,6.782537987593783,0.5625817220179333,0.09028510654694573
+squad,A is more X than B. Who is more antonym(X)? B. Who is less X? B. Who is more X? A. Who is less antonym(X)? A.,MFT,Taxonomy,gemma,Gemma-2-9B,AR,21656,4.1558573584493255,2.510665509135525,0.3290023319201291,0.09634505132213923
+squad,Question typo,INV,Robustness,gemma,Gemma-2-9B,AR,252,0.22198361259526925,0.0,0.009669989820510622,0.057891482871676246
+squad,Question contractions,INV,Robustness,gemma,Gemma-2-9B,AR,3,0.3750994560994561,0.0,0.009591440359751383,0.02838510274887085
+squad,Add random sentence to context,INV,Robustness,gemma,Gemma-2-9B,AR,905,0.28811539001295394,0.0,0.019443594158025077,0.0892650350681326
+squad,Change name everywhere,INV,NER,gemma,Gemma-2-9B,AR,2124,1.4184061859298078,1.0202807947200928e-05,0.06268056027552643,0.11065359043199463
+squad,Change location everywhere,INV,NER,gemma,Gemma-2-9B,AR,2373,1.0941557920404172,0.0,0.059976885951600195,0.09886026481661775
+squad,Understanding before / after -> first / last.,MFT,Temporal,gemma,Gemma-2-9B,AR,488,10.788518451207445,10.89240331228398,0.642752825175641,0.06125871971493862
+squad,Negation in question only.,MFT,Negation,gemma,Gemma-2-9B,AR,6063,4.065128711472967,0.005042114479118369,0.2750998049871217,0.07382206314765795
+squad,"Basic coref, he / she",MFT,Coref,gemma,Gemma-2-9B,AR,7247,6.614459208446811,6.242934352258016,0.605641201851478,0.10122977925676041
+squad,Former / Latter,MFT,Coref,gemma,Gemma-2-9B,AR,290,3.5935548114386653,0.0013413341100062919,0.20878953797550037,0.05929092353787915
+squad,Agent / object distinction,MFT,SRL,gemma,Gemma-2-9B,AR,520,8.44508321777378,8.510644600024936,0.5991200290620327,0.07496086324636753
+squad,Agent / object distinction with 3 agents,MFT,SRL,gemma,Gemma-2-9B,AR,9570,6.6902191466514305,7.957205955360562,0.4393252359810232,0.06950419071201495
+squad,A is COMP than B. Who is more / less COMP?,MFT,Vocabulary,olmo,OLMo-2-7B,AR,52,9.316076930131286,9.379114336006467,0.6153968340502336,0.06716910004615784
+squad,"Intensifiers (very, super, extremely) and reducers (somewhat, kinda, etc)?",MFT,Vocabulary,olmo,OLMo-2-7B,AR,4859,7.50836759158817,9.371232892804699,0.43844191402497423,0.05926520916679117
+squad,"size, shape, age, color",MFT,Taxonomy,olmo,OLMo-2-7B,AR,2000,4.828911820889519,4.9134834324194685,0.6289758700579405,0.13744783189892767
+squad,Profession vs nationality,MFT,Taxonomy,olmo,OLMo-2-7B,AR,12500,4.2688805328728465,4.3669234626071916,0.6955091445565224,0.16620665135860443
+squad,Animal vs Vehicle,MFT,Taxonomy,olmo,OLMo-2-7B,AR,1799,9.27682016434123,9.925560719002283,0.6495375570868571,0.07296489741551737
+squad,Animal vs Vehicle v2,MFT,Taxonomy,olmo,OLMo-2-7B,AR,1624,6.6066064472119805,8.12216991749726,0.4212672441000385,0.06491725069695506
+squad,Synonyms,MFT,Taxonomy,olmo,OLMo-2-7B,AR,1788,4.07410347599058,4.042051063411314,0.6151201927021845,0.1581296028373492
+squad,A is COMP than B. Who is antonym(COMP)? B,MFT,Taxonomy,olmo,OLMo-2-7B,AR,677,6.80631861605545,6.779933986519352,0.5625803843690866,0.09028510654694573
+squad,A is more X than B. Who is more antonym(X)? B. Who is less X? B. Who is more X? A. Who is less antonym(X)? A.,MFT,Taxonomy,olmo,OLMo-2-7B,AR,21656,3.944400075025005,0.008727157668826216,0.3144555875001455,0.09634505132213923
+squad,Question typo,INV,Robustness,olmo,OLMo-2-7B,AR,252,0.41833245561210236,0.0,0.018999325141074167,0.057891482871676246
+squad,Question contractions,INV,Robustness,olmo,OLMo-2-7B,AR,3,0.0023558663558663558,0.0,6.024042765299479e-05,0.02838510274887085
+squad,Add random sentence to context,INV,Robustness,olmo,OLMo-2-7B,AR,905,0.729648429526505,0.0,0.047139009833335875,0.0892650350681326
+squad,Change name everywhere,INV,NER,olmo,OLMo-2-7B,AR,2124,1.5374960498683061,0.0002706479901086669,0.07473445243838817,0.11065359043199463
+squad,Change location everywhere,INV,NER,olmo,OLMo-2-7B,AR,2373,1.486978805345507,0.00021508012400796672,0.07855045980684776,0.09886026481661775
+squad,Understanding before / after -> first / last.,MFT,Temporal,olmo,OLMo-2-7B,AR,488,2.015902069276475,0.0,0.12263784862932611,0.06125871971493862
+squad,Negation in question only.,MFT,Negation,olmo,OLMo-2-7B,AR,6063,4.033965798341586,0.004996432592494835,0.2727431198138127,0.07382206314765795
+squad,"Basic coref, he / she",MFT,Coref,olmo,OLMo-2-7B,AR,7247,7.005091399114991,6.755410512715129,0.6424788406294297,0.10122977925676041
+squad,Former / Latter,MFT,Coref,olmo,OLMo-2-7B,AR,290,0.11920657601840082,0.0,0.0076290460496113216,0.05929092353787915
+squad,Agent / object distinction,MFT,SRL,olmo,OLMo-2-7B,AR,520,5.793703515193877,6.4138158042327875,0.40868478196744734,0.07496086324636753
+squad,Agent / object distinction with 3 agents,MFT,SRL,olmo,OLMo-2-7B,AR,9570,6.79444971083709,8.107891048149364,0.4464955066438753,0.06950419071201495

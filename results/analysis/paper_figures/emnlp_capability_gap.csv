@@ -1,0 +1,11 @@
+capability,n_subtests,gap,gap_lo,gap_hi,significance,class,source_note
+Logic,6,0.007,-0.15,0.12,ns,semantic,compact aggregate from EMNLP capability bootstrap
+Vocabulary,15,0.111,-0.11,0.34,ns,semantic,compact aggregate from EMNLP capability bootstrap
+Negation,5,0.157,0.03,0.30,sig,semantic,compact aggregate from EMNLP capability bootstrap
+Temporal,7,0.424,-0.76,1.99,ns,semantic,compact aggregate from EMNLP capability bootstrap
+SRL,10,-1.098,-3.02,-0.03,sig,surface,compact aggregate from EMNLP capability bootstrap
+Coref,3,-0.832,-3.48,0.73,ns,surface,compact aggregate from EMNLP capability bootstrap
+Taxonomy,10,-0.752,-1.76,-0.09,sig,surface,compact aggregate from EMNLP capability bootstrap
+NER,16,-0.665,-1.15,-0.26,sig,surface,compact aggregate from EMNLP capability bootstrap
+Fairness,4,-0.554,-0.74,-0.29,sig,surface,compact aggregate from EMNLP capability bootstrap
+Robustness,12,0.196,-1.05,2.14,ns,surface,compact aggregate from EMNLP capability bootstrap

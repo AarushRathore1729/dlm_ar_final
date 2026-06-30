@@ -1,0 +1,4 @@
+task,alpha_Diff,gamma_AR,gamma_minus_alpha,gamma_over_alpha,Delta_perp_Diff,Delta_perp_AR,Delta_perp_gap
+sentiment,1.7898,1.7612,-0.0286,0.9840,0.1335,0.1224,0.0112
+qqp,1.7564,1.6037,-0.1527,0.9131,0.2758,0.1358,0.1401
+squad,5.2430,5.2731,0.0301,1.0057,0.4578,0.4602,-0.0025
