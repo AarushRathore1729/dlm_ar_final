@@ -35,7 +35,7 @@ import numpy as np
 IN_CSV = Path("results/expansion/analysis/test_summary.csv")
 OUT_DIR = Path("results/expansion/analysis")
 
-TASK_ORDER = ["sentiment", "qqp", "squad", "mnli", "paws", "anli", "wildguard", "xstest"]
+TASK_ORDER = ["sentiment", "qqp", "squad"]
 
 AR_FAM = ["llama_instruct", "mistral", "qwen", "gemma", "olmo"]
 DLM_GROUPS = [
@@ -120,7 +120,7 @@ def main():
 
                 # Case-level (binomial) bootstrap: fixed test set, resample each
                 # model-test fail count ~ Binomial(n_cases, fail_rate). The right
-                # unit when a suite has very few subtests (e.g. WildGuard INV = 1).
+                # unit when a suite has very few subtests.
                 rate = np.where(cases > 0, fails / cases, 0.0)
                 cases_int = cases.astype(np.int64)
                 cboots = np.empty(args.boot)
@@ -182,8 +182,7 @@ def main():
         r"Suite & Overall gap (pp) & INV-only gap (pp) \\",
         r"\midrule",
     ]
-    paper_tasks = [t for t in tasks if t != "xstest"]  # XSTest dropped from the paper
-    for task in paper_tasks:
+    for task in tasks:
         lines.append(f"{task} & {cell('overall', task)} & {cell('INV', task)} \\\\")
     lines += [
         r"\bottomrule",

@@ -33,9 +33,6 @@ BASE = ROOT / "results" / "expansion" / "checklist"
 # (task, model_dir, jsonl_name)
 TARGETS = {
     "dream_qqp":   ("qqp",  "dream",      "examples_full_Dream-org_Dream-v0-Instruct-7B.jsonl"),
-    "dream_anli":  ("anli", "dream",      "examples_full_Dream-org_Dream-v0-Instruct-7B.jsonl"),
-    "dream_mnli":  ("mnli", "dream",      "examples_full_Dream-org_Dream-v0-Instruct-7B.jsonl"),
-    "dream_paws":  ("paws", "dream",      "examples_full_Dream-org_Dream-v0-Instruct-7B.jsonl"),
 }
 
 

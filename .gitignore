@@ -28,3 +28,6 @@ docs/
 extras/
 results/checklist/
 results/lightning/
+
+# Generated figures and manuscript source
+paper/

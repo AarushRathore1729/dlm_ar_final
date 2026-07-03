@@ -12,7 +12,6 @@ Two outputs from results/expansion/analysis/test_summary.csv:
    these are the subtests where architecture/training matters most.
 
 Exclusions (consistent with the rest of the project):
-- XSTest is out of scope (regex DIR analysed separately).
 - Dream reruns (steps=64) are validated clean, so all Dream cells are retained;
   test_summary.csv already prefers the rerun dirs.
 """
@@ -31,15 +30,14 @@ TEST_CSV = ROOT / "results/expansion/analysis/test_summary.csv"
 OUT_DIR = ROOT / "results/expansion/analysis"
 FIG_DIR = ROOT / "paper/fig"
 
-EXCLUDE_TASKS = {"xstest"}
+EXCLUDE_TASKS: set[str] = set()
 EXCLUDE_MODELS: set[str] = set()
 # Dream reruns (2026-06-07, steps=64) validated clean — no Dream cells excluded.
 DREAM_INVALID_TASKS: set[str] = set()
 
-TASK_ORDER = ["sentiment", "qqp", "squad", "mnli", "paws", "anli", "wildguard"]
+TASK_ORDER = ["sentiment", "qqp", "squad"]
 TASK_LABEL = {
-    "sentiment": "Sentiment", "qqp": "QQP", "squad": "SQuAD", "mnli": "MNLI",
-    "paws": "PAWS", "anli": "ANLI", "wildguard": "WildGuard",
+    "sentiment": "Sentiment", "qqp": "QQP", "squad": "SQuAD",
 }
 
 
@@ -97,7 +95,7 @@ def write_full_table(subtests):
         r"% Full per-subtest pass rate (mean and model range) across valid models.",
         r"\begin{longtable}{@{}p{0.40\textwidth}llrr@{}}",
         r"\caption{Per-subtest pass rate across all retained models (mean and "
-        r"min--max range). XSTest is analysed separately.}"
+        r"min--max range).}"
         r"\label{tab:subtest-full}\\",
         r"\toprule",
         r"\textbf{Subtest} & \textbf{Type} & \textbf{Capability} & "

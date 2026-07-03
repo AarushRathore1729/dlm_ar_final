@@ -8,8 +8,8 @@ flag (minority-label rate >= 10%). A model that pins one label is "rigid":
 its INV stability is trivial, its DIR behaviour degenerate, and its
 contraction gamma uninterpretable (see the label-engaged gamma treatment).
 
-Covers the seven label tasks (sentiment, qqp, paws, mnli, anli, wildguard,
-xstest); SQuAD is free-span and has no label prior to audit.
+Covers the two label tasks (sentiment, qqp); SQuAD is free-span and has no
+label prior to audit.
 
 Outputs:
   results/expansion/analysis/label_audit.csv
@@ -26,7 +26,7 @@ from collections import Counter
 from pathlib import Path
 
 OUT_DIR = Path("results/expansion/analysis")
-TASKS = ["sentiment", "qqp", "paws", "mnli", "anli", "wildguard"]
+TASKS = ["sentiment", "qqp"]
 MODELS = ["llada_instruct", "llada_moe", "dream",
           "llama_instruct", "mistral", "qwen", "gemma", "olmo"]
 DISPLAY = {
@@ -36,9 +36,8 @@ DISPLAY = {
 }
 PHASE2 = {"llada_instruct": "results/checklist/{}/llada_rerun_fixed",
           "llama_instruct": "results/checklist/{}/llama_rerun_fixed"}
-ABBREV = {"duplicate": "dup", "not_duplicate": "ndup", "entailment": "ent",
-          "contradiction": "con", "neutral": "neu", "positive": "pos",
-          "negative": "neg", "comply": "cmp", "refuse": "ref"}
+ABBREV = {"duplicate": "dup", "not_duplicate": "ndup", "neutral": "neu",
+          "positive": "pos", "negative": "neg"}
 ENGAGED_MIN_MINORITY = 0.10
 
 
@@ -140,12 +139,13 @@ def _figure(rows: list[dict]) -> None:
 
     LABEL_COLORS = {
         "duplicate": "#d62728", "not_duplicate": "#1f77b4",
-        "entailment": "#2ca02c", "contradiction": "#d62728", "neutral": "#7f7f7f",
+        "neutral": "#7f7f7f",
         "positive": "#2ca02c", "negative": "#d62728",
-        "comply": "#1f77b4", "refuse": "#ff7f0e",
     }
     by = {(r["model_key"], r["task"]): r for r in rows}
-    fig, axes = plt.subplots(2, 4, figsize=(16, 7), sharex=True)
+    ncols = len(TASKS)
+    fig, axes = plt.subplots(1, ncols, figsize=(4 * ncols, 5),
+                             sharex=True, squeeze=False)
     axes = axes.ravel()
     for ax_i, task in enumerate(TASKS):
         ax = axes[ax_i]
@@ -174,7 +174,8 @@ def _figure(rows: list[dict]) -> None:
         ax.set_xlim(0, 1.12)
         ax.axhline(4.5, color="black", linewidth=0.6, linestyle=":")
         ax.tick_params(axis="x", labelsize=7)
-    axes[-1].axis("off")
+    for j in range(len(TASKS), len(axes)):
+        axes[j].axis("off")
     fig.suptitle("Predicted-label distributions per model and suite "
                  "(dotted line separates DLMs above from ARs below)", fontsize=11)
     fig.tight_layout(rect=(0, 0, 1, 0.96))

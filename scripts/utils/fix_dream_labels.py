@@ -2,8 +2,6 @@
 """Fix Dream label-parsing artifacts and rebuild checklist summaries.
 
 Dream's masked diffusion generates the END of a label word with a leading period:
-  entailment    -> '.ailment'    (drops first 3 chars)
-  contradiction -> '.adiction'   (drops first 5 chars)
   not_duplicate -> '._duplicate' (replaces 'not' with '.')  or just 'not'
   duplicate     -> '._duplicate' -- also a truncation pattern; resolved by context
 
@@ -26,29 +24,7 @@ ROOT = Path(__file__).resolve().parent.parent.parent
 # Label recovery
 # ---------------------------------------------------------------------------
 
-NLI_LABELS    = {"entailment", "neutral", "contradiction"}
 BINARY_LABELS = {"duplicate", "not_duplicate"}
-
-_NLI_SUFFIXES = {
-    "ailment":   "entailment",
-    "adiction":  "contradiction",
-    "ntral":     "neutral",
-    "ntr":       "contradiction",
-}
-
-
-def _recover_nli(raw: str) -> str | None:
-    s = raw.strip().lstrip(".''\"").lower().strip()
-    if s in NLI_LABELS:
-        return s
-    for suffix, label in _NLI_SUFFIXES.items():
-        if suffix in s:
-            return label
-    # prefix match (>= 3 chars)
-    for label in NLI_LABELS:
-        if len(s) >= 3 and label.startswith(s[:4]):
-            return label
-    return None
 
 
 def _recover_binary(raw: str) -> str | None:
@@ -77,9 +53,7 @@ def _recover_binary(raw: str) -> str | None:
 
 
 def recover_label(raw: str, task: str) -> str | None:
-    if task in ("anli", "mnli"):
-        return _recover_nli(raw)
-    if task in ("qqp", "paws"):
+    if task == "qqp":
         return _recover_binary(raw)
     return None  # squad spans not recoverable
 
@@ -218,13 +192,7 @@ def rebuild_summary(jsonl_path: Path, task: str, model_key: str,
 # ---------------------------------------------------------------------------
 
 TARGETS = [
-    ("anli",  "dream",     "Dream-org_Dream-v0-Instruct-7B",
-     "examples_full_Dream-org_Dream-v0-Instruct-7B.jsonl"),
-    ("mnli",  "dream",     "Dream-org_Dream-v0-Instruct-7B",
-     "examples_full_Dream-org_Dream-v0-Instruct-7B.jsonl"),
     ("qqp",   "dream",     "Dream-org_Dream-v0-Instruct-7B",
-     "examples_full_Dream-org_Dream-v0-Instruct-7B.jsonl"),
-    ("paws",  "dream",     "Dream-org_Dream-v0-Instruct-7B",
      "examples_full_Dream-org_Dream-v0-Instruct-7B.jsonl"),
 ]
 
