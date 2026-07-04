@@ -5,7 +5,7 @@ Exits with code 1 if any check fails. Intended for CI or post-rsync verification
 
 Usage:
     python scripts/validate_checklist_runs.py
-    python scripts/validate_checklist_runs.py --root /path/to/DLM_posix
+    python scripts/validate_checklist_runs.py --root /path/to/project
 """
 
 from __future__ import annotations

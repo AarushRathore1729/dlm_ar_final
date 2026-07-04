@@ -31,3 +31,7 @@ results/lightning/
 
 # Generated figures and manuscript source
 paper/
+
+# CheckList release data (downloaded, not shipped)
+data/checklist/release_data/
+data/checklist/release_data.tar.gz

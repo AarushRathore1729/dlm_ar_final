@@ -19,7 +19,7 @@ Writes:
 
 Usage:
     python scripts/analyze_checklist_results.py
-    python scripts/analyze_checklist_results.py --root /path/to/DLM_posix
+    python scripts/analyze_checklist_results.py --root /path/to/project
 """
 
 from __future__ import annotations

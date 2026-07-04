@@ -22,6 +22,10 @@ claims. The manuscript source and compiled PDF are not part of this repository.
   judges, and task utilities.
 - `configs/`: experiment configuration files for the CheckList sentiment, QQP,
   and SQuAD runs.
+- `scripts/run_checklist.py`: the evaluation entry point that runs a config's
+  models over a CheckList suite and writes per-test outputs.
+- `data/checklist/`: instructions for obtaining the original CheckList
+  release data needed to rerun evaluations (the data itself is not shipped).
 - `scripts/analysis/`: aggregation, auditing, bootstrap, and
   perturbation-coefficient analysis scripts.
 - `scripts/plotting/`: scripts that regenerate the figures from retained
@@ -66,8 +70,9 @@ PYTHONPATH=src pytest -q
 
 The tests cover the local judging/parsing utilities that are most likely to
 affect the retained aggregate analyses. They do not rerun the full model
-evaluation, which requires external model weights and the raw CheckList outputs
-that are intentionally excluded from this artifact.
+evaluation, which requires external model weights and the CheckList release
+data that are intentionally excluded from this artifact (see "Rerunning
+Evaluations" below).
 
 ## Regenerate Figures
 
@@ -89,6 +94,21 @@ run). The four primary figures are:
 
 Additional generated figures support checks and appendix-style views used
 during analysis.
+
+## Rerunning Evaluations (Optional)
+
+The retained aggregates are sufficient to verify the figures and claims, so
+rerunning the model evaluations is not required. To rerun them anyway, install
+the `checklist` extra (`pip install -e ".[analysis,checklist]"`), download the
+CheckList release data following `data/checklist/README.md`, and run the
+evaluation entry point with one of the retained configs, e.g.:
+
+```bash
+python scripts/run_checklist.py --config configs/checklist/phase2_checklist.yaml
+```
+
+Model weights are pulled from the Hugging Face Hub as referenced in each
+config; a GPU is required.
 
 ## Result Provenance
 
