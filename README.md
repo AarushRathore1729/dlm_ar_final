@@ -1,5 +1,13 @@
-# DLM Safety: CheckList Robustness Analysis
+# Robustness of Diffusion and Autoregressive Language Models to CheckList-Style Perturbations
 
+📄 **Paper:** [OpenReview](https://openreview.net/forum?id=UYuYrUrtUw)
+
+**Aarush Rathore, Tirtharaj Dash, Lovekesh Vig, and Ashwin Srinivasan**  
+*Grounding Language Models: Learning Faithfully and Efficiently @ EMNLP 2026*
+
+This repository contains the code and analysis artifact for work on the
+relative robustness of diffusion and autoregressive language models under the
+original CheckList sentiment, QQP, and SQuAD behavioral suites.
 This repository contains the code and analysis artifact for work on the
 relative robustness of diffusion and autoregressive language models under the
 original CheckList sentiment, QQP, and SQuAD behavioral suites. The study
@@ -129,6 +137,20 @@ Full raw model outputs, complete run directories, model checkpoints, local
 caches, old drafts, and machine-specific files are intentionally excluded from
 this artifact because the full runs are large and not needed to verify the
 figures and aggregate claims.
+
+## Citation
+
+If you find this work useful, please cite:
+
+```bibtex
+@inproceedings{rathore2026robustness,
+  title     = {Robustness of Diffusion and Autoregressive Language Models to {CheckList}-Style Perturbations},
+  author    = {Aarush Rathore and Tirtharaj Dash and Lovekesh Vig and Ashwin Srinivasan},
+  booktitle = {Grounding Language Models: Learning Faithfully and Efficiently @ EMNLP 2026},
+  year      = {2026},
+  url       = {https://openreview.net/forum?id=UYuYrUrtUw}
+}
+```
 
 ## Notes
 
